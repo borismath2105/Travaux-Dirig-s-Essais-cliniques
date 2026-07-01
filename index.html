@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelier — Développer un nouvel anti-HTA · UJKZ</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAARvklEQVR42u3de3Bc1X0H8O/vnLNvrWTJ8gObYOwEjB2HDMUUwiQIMcmk/EVasioF0oGa4AmJIZ1OJmmn7VohnekDOnkAqUWgZYCSSKQepplAWprFKU0N2BAedYODXzyKZayHrX3ee8/59Y97Vy9L1kpa7fOekWY8WvuutZ/v+Z1z7t57luC3JWmcTAocOEA0MKCLP/t1cldn9PCBSwOnx64E0cUoFDawEOvAHBWOo4iZjAo4LMiS2rzrBEPvEPh1JxJ5iTs6967bdfdhGOMeHxBIJKYcfyGNfKoywzMTenpEEea1O/9qVefxdz+rcvnrYduXKzarIiAYY6DBsLWGcUEBIhAzCIASAooEpBCwAeTAYxQIvc7h4FOZ1hVPbXj4W296QSAkk0S9vcYPQJVbqqtLde/Z4wDAwe1/urlj8OQdVCjc0MK8nI1GTmtYbBggA2LyXn6iGRzY/WIwMcCkiERESASkwihrxwRDP+N427dXP/HtZ8EAJxISA/2GQOwHoMItmUyKnb29TAC/cWfyvFVv/99fynz2phZGOO3YsJk1QABB0AJf8/FAgIxgVi0qAFsQ7GDw5+m29uS6R//+eQDoTyRkzzyGBT8Aiy35iYSkgQENIXD8+u13BdKZv4gbvfyUbcEQOQAklfl1ZoDBMABTq1IiR4KdaHTXkY3r//zyv/6zIe7qUuRVIj8AFSj5r+5Inrvm7Xf7lln2tWNWHjYwP3iaWbm0OQc0wKIjEKLTSh4aXrbstgse/85zXjDNXEfyA7DQXuj1srdu+Oo1y8dGHo3Y9ppTju2AaG744qMGYPYq+5THCUSTZgclhMGAnSgJZVRQn26Jff28J//h3n5AJgBDZzmCH4AF4ScV7el1jt14V6J1ePgx6VjBLLMjAFXSvzeuh1ACIqQgggpCCe8xA2Np6IIDtjSYGSRFSUEwYCMZ1BYK0weRyD1rd/d9jTkhgdknh34AFoh/NHHHF5enx/osK882gwWRmKvXs3YNAvEQgu1RqFgQIiABMZnCne4Zx0DnbNijOVin8mBHu0EoYX5AzLojFFGD4eDDa3f/YBsDErNUAj8AC+n5iS/d3plO78oV8sYhIlFCyWfHQMWCCK9uRSAeAojcSsB8Jot3NBIEEEHnbeQHx2CN5EBUwsyCCGBjR4dHAu/BfH/jq8/dkfrUp8aXqJOb9FkXil/QDpEQJXQi1gahFS2IndcOGQ648Iangk/+nqjpgGEIJRFsj0IoCSdTKAGfkR0clKdPDdsrIC//ww1b9G//17PPpbq61CPHjk05YSR82oXiozR8w4isaUP03GXjYSi59nqBYGawbRBe1YLImrbxoWQ2/NzgcTiZNBAIqtFCzmkfHbn7wFW/+5nuPXuc/kRC+gGoKH4rwqviYGce8DMM7KQITrqAwgdpzDjbmIRvZ9IgIUDMpIUQ2rY5MnTyn35185+sTAwMcBJJ4QegUvgrPXyaHfesP2OAJEEXHKSPDEPnHRd7DvxJRUQUwLrVstaE3nj5XgLMzsQB8gNQC/hwezYJb37ODCICqeKyjyfwDw/BWBokS8ef+CukRrWtW/P5mw9eneiigQHN3lCgfOoq4LPb9QgEayQHazQHY2mAGSIgobxloggq6KyF9JFJ+Dw//PGnJAFpO8DQ4D1J5stB7nkBfxlYBXwSBKMNsu+Mwj6Vc98n8so6szvzl9EAwqviyB8fg847ILVw/PGnZtYtgaAcXbH62oue3/1MqqtL+QGoEn7myBCcjOWW++njPrkhYMbM6/4F4HtPoeMkxGgkvGfja3uuYZrr7JWPvzT4h4fgZGwXn2eYCLKLTKJ8+F6uZNpohC37qjeuvXkTAcYPQDXws/aZJb0kwYXjT6kCzEKd+CDhrwKaDN87jihoDVnIfS6VSjX3HKDp8ItrfwZ0QOYLH9l0sfTxmwsfcN82jgoZsFi/In385sL3ZoMmTCQsiEHp488DXzMia+sc30uAAshWgZz08eeBP/mNnbrFH18SkhFE1Gz4hxNfun1Vk+N7YxlMNNYcF4RMvoxrZTrd1/T4E/9vpmbCX5Ee8/GnLwl9/ObFB1HjBsDHn+uXZLAKNGYAfPwSnpoZRilHNjJ+Z3qsL1+z+O6xcoPvw85kKooPwIRIkBbioPDxmw7fvSCJAA6G3xE+fnPhFycAkgSY+FfCx282fAAMYRHBROK/FD5+c+EzwAEiygs65Zy7dq9oWnzThD3fmwBGSAAqsG9L//2Dounwvbt0w6viiJzT2mz4YGZIIWFi0X4QsWi2nl+8Jt85nYeTtc681r6R8QFWgBgVlNVrzvtXoA5PBS8Kv+giCE7WQubwMIzlTA1Bg+IXZz1xqcgOBZ/cvLvvfU4kZF0FgJOpReOPIysBbTlIH5ocAm5gfIAYIiOElqvP+1sAGEAd3RnEyZSi3m7n6A1f+WLn6dN9+Xx+YfgzzAdkUCG2oQMqEoAuaPemjQbDN2DdLpQcikZ/tPHV1A39gOwBdF1UgH27dgWot9v57/t237JidLSvkMstHr9YCSRBWw4yR4dhjxWQOTrszg0aCJ8BDjBoTMqMOf+8bzBAiWSSgTq4OXTXPg5s3Ur2k4ecGwdbzcNvstHrHntIUDxOLhCjHCEwBQfpQyddx+IdOw2A7039dVsgqAbjLXdveuqRo5xISOrt1UCNbxGzax8Htm8lu/8I3xiKice0Lfn4xzcJQSHq3P8idCgIKtcoRjTxjcbBN4BuE1KNRCL/+erLz27vP3BAYGDA9HqPi7rAj+IxxwFr21Aoa+jQTZ/HoRtvQSCd9q5pquJUpobxGTAhZpELBEesj2z4Qg+RxubNPHlwk/WAr22wdkAk3FtlpWVwcutHAQRR9krQOD2fFTNkKEynV678vS3PPLGfEwlJDzwwZZMoWT/4nrC3g2bVQ1DbPZ8ls4kFQ3K4Y/kfbXn+qSdTXV1q/U9/esYm0rKu8KeN2VULQY3jC2bTEgjKkVjLVza/+PSD3NWl1s+yebSsS/xqhqBO8IdaonduevnZ++baOVzWLX41QlAvPb8ltuOi/f9xXynbxsu6xq9kCOoIf+P+Z+8r9TMDZN3jVyIEDYpf1QCUFX8pQ1AH+LFAUI4uAL9qAVgS/KUIQYPjVyUAS4pfzhA0AX7FA1AR/HKEoEnwKxqAiuIvJgRNhF+xAFQFfyEhaDL8igRgofjTPzxjaULQ3PhLHoDF9Hzbe89K0FKGIARqYvwlDcBi8B0DbFkGOAykHUAtWQhegAmHATQn/pIFYLE9/5J2YHMbsDoMHM8DOe1+DGe5Q0AUwvKX9iJ9ahROOt10+EsSgMXi/1Y7sLHV/VCtkATWRoD3yx0CEFRB451Lt8AaSqPj509Dt8RBzE2FX/YAlAP/wtZJ968DCIryh4AIyGlCIWNw4srLoCygc+8e6Eis6iGoJH5ZA1BOfJo6MUdQAGsiwGAByOuFXbc5ebKf00DOEAgEYTNOdF0BlTfo3PuLqoag0vhlC8BS4E8GMwBCAlgeAg6nFx6AcXztPY93IGEZnOj6RFVDMBU/vmPj/n9fcvyyBGAp8b0XBgJAQQMvDHt4VAb8yeMBqKohOBP/3yqCv+gAVAKfPPxffACcLAABUUb8GghBNfEXFYBK4w8V3GGAy41fxRBUG3/BAVg0fsfC8M1S4VchBLWAv6AAlAU/XoP4FQxBreDPOwCLxb+0VHxTJfwKhKCW8OcVgHLgX1Aq/okq4i9hCGoNv+QANB3+EoSgFvFLCkDT4pcxBLWKP2cAUszq82vJaVr8MoSglvHPGoAUs+omcn50hP8gEsM/Ny3+IkJQ6/izBiCZYnXrenKeeIuvjbZgwHEAowESc28o0ZD4CwhBPeDPGABmFt3rSf/wEF8WbcVPjEZIO6V9ukhD488jBPWCD0zbJCqZZAGA+9/mDiUwIAgtlgXT9D1/phCwgBrT+N8/vgsAsP4f74fV1gEYXTf4wLQ9gj66E0RETAY/iMSxLp+F4+OfrRJMhODIrV9GYHS4rvCnDAH9zLKHSPcf4VvbOvGNsRE4RHNvI9eU+DMMB4NXfYKDljFrD7whT7Z37ti075maxy++psXSjwtvR0eE8YZQWOEU3N/Nxy9hna8NU1CYcARy7QN9d3R/c/v3U8mk6u7trWn88QAUe//AMf5uazt2nC6h988H3/LwTzYivgELBROKQBZO6+3bNqq+VCqluru7ax4fAFSSWfQQzO53+UMG2JYdg6E5ThD5+DPhY/u2japv3+27Alu7u23USVNXPwfRC3IczXfF2xGda+z38WfDp74Us9pKVDf440PAowe5NRzCW4EgOh17/DK8M/EZuLTdx58Nv5vIQZ01AQCRCD4Ta8MKx4KZCZ+8nn/JMh+/kfAnzgMwfp8IDDrzkrviDP6iVveOHR+/cfABQPQPcgsbXGnlQMxTJ38E9wbNFWHg4mU+fqPhA4CgPC6RAZxjW2CaZeuMjy+b/TZtH7++m2Dgk6EIBHiqGXmTvnMiwIrQ7L3fx6/zAAhg82wX2zMD58fOfgAfv84DAOBCrSeWhMVmAEQVsDKMMx/ExA0aLw0BH/j4dR2AtdpxPzpnMoxmIK5c2NnG/feywNtZIOzj13EACFHmGXo4A7HA1N4+vR3LTtzC7ePXbwWIsQGm75vGmLn3FwEZQNqe/yZOPn5tNQWG5LNgzfpisVv2ycev+2VgRggAfGYlt83ZTiAAUVn62O/j1+qJIEKWZrjtWgDI6tlP/gDuOQLNPn59VwDGSSEBmvY+gCDgtO2eCqZZhoZ1MWB50A0B+fh1WwEOSjV1ss9wd+PKOMCINfNKwMDdvGlLm7ulm49fv3OAN2mWtZxm4Fhm5iFAwN3F8/VTbljYx6/PAAjGXscCeNp1AAx3P553sm4lKGakeBIo7QB7TgCnrDOXgj5+HQVAOXjBKmBEBUA8bSVQ3J3r9VMTS7/J+GnHDQn7+PUbgOs+TIMgvBIKg2naqq64SePRjPstCBizJ+GTj1//J4Lcnv4vQuEahvdh3NNCoAh4ZcSd7B0c8/EbqREA/Pggn4sIfkOEkNHAbJ+p4rB7vbjw8RtnCOjvZ3n9hfSuMfhJuAXEZzm5FyDvvkgfv3ECgIT7B0n4Oys/+2VhM50L8PEbZAhgZkFEZuAoPx1bht/JnIImOvvdQT5+o1QAAAMDIIApGMbX7TwsKWfs8D5+owagp4d0P0Nct5pes/L4XssySDbQPn6TDAHeMEAA6KlfI6Zb8GIwjIsKWWhMGgp8/AatAABARDwwAPrcJhqzNW4yBpZU7gvr4zdBAIpDQTLF6obz6eVCBjvCLZBCQhPAPn6DDwGTWyrFqrubnP6jnGzrwM4TJ+HkNRRRDeJLcCgK4eOXMQDAxEaRjx3m+wPtuGNsCA4zJFFtFAE2MEKBgmFQIYPbb7uAHvTxFzkETG5XA7qfWd68gb6cHcY9sWVuBWCe9y0A5cdnOMEIhFSwCxn03HYBPZj08RfUZt0JhIgYzMY7SfS1h37DxwMR/A0Y0sqXtoPYEsAzAB1thdI23rPT+MJtmyiVSvn4Za8AXgqYAO5nltsuoHtNDp8G41C8A4oZzAxdMXuGIxUo3g7l5PF0fghX3LaJUklvvuJTlnkOML0lU6x6u8n53gu8PL4K32LC9kAIlBuDAcDeVrK0FD2eBFSsFchnMUTA3beso+8AE7ub+YwVCAAA9Pez7OlxX/CHDvEnVQC9JHCNVEAuA4DhMEOQ+4YyLQLdAIBUkJEWoJBDnhiP58fwze1b6G1mpp07Qb29ZHzCCgbAq8U0AIhiz3vkGH+aDb5qgM9G4lCOBdgFwDgw3gUmxADNsnpwLzNkeF8QKggKhgESgJXFEAn80MnhgW0X0oHJlcinq1IAxocEZrETYCJiAHj0MG90BK4D4zpj8LFACHGpAK3drea17b27xBPPLAiQAUBId6MCqwCwwSARXiDCj4MOfnbjh2mwWO4TgCk+n9+qHIDxYYFZ/g/AvTRRjh8/xhsKDq4wwGUEfAyED7HBuQCCcO9HZCI4zMgS4RgJHAbhNcn4pQph/01r6eTZju+38rX/B6XaGkllOA6mAAAAAElFTkSuQmCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E7EAE6; --panel:#FFFFFF; --panel-2:#F4F6F3;
+  --ink:#1B2026; --ink-soft:#4E5661; --line:#D6DAD4;
+  --brand:#8E1B3F; --brand-soft:#F3E1E7;
+  --armN:#0E7C66; --armN-soft:#DDEFEA;
+  --armR:#BE7415; --armR-soft:#F7E9D5;
+  --good:#1F7A4D; --good-soft:#DCEFE3;
+  --bad:#C0392B; --bad-soft:#F7E1DE;
+  --info:#2C6E91; --info-soft:#DCEAF1;
+  --sun:#F2B705; --cloud:#7C8591;
+  --shadow:0 1px 2px rgba(20,30,25,.06),0 8px 24px rgba(20,30,25,.07);
+  --font-display:'Spectral',Georgia,'Times New Roman',serif;
+  --font-body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);
+  font-size:17px;line-height:1.58;-webkit-font-smoothing:antialiased;}
+.app{max-width:1180px;margin:0 auto;padding:18px 20px 80px;position:relative;z-index:1;}
+
+/* ---------- ambient background ---------- */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(1100px 560px at 93% -8%, rgba(142,27,63,.12), transparent 60%),
+    radial-gradient(980px 700px at -8% 106%, rgba(14,124,102,.10), transparent 58%),
+    radial-gradient(760px 520px at 50% 120%, rgba(190,116,21,.06), transparent 60%),
+    radial-gradient(rgba(27,32,38,.05) 1.1px, transparent 1.1px);
+  background-size:auto,auto,auto,23px 23px;}
+.bg-deco{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.bg-deco .mol{position:absolute;}
+.bg-deco .mol.a{top:-58px;right:-46px;opacity:.055;transform:rotate(9deg);}
+.bg-deco .mol.b{bottom:-72px;left:-54px;opacity:.05;transform:rotate(-13deg);}
+.bg-deco .mol.c{top:38%;left:-96px;opacity:.04;transform:rotate(24deg);}
+@media (max-width:880px){ .bg-deco .mol.a{width:210px;height:210px;} .bg-deco .mol.b,.bg-deco .mol.c{display:none;} }
+
+/* ---------- institutional banner ---------- */
+.brandbar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--panel);
+  border:1px solid var(--line);border-radius:14px;padding:12px 18px;box-shadow:var(--shadow);margin-bottom:14px;}
+.brandbar .logo{flex:none;}
+.brandbar .logo img{height:54px;width:auto;display:block;}
+.logofallback{height:54px;width:54px;border-radius:50%;background:var(--brand);color:#fff;
+  font-family:var(--font-display);font-weight:700;display:grid;place-items:center;font-size:15px;letter-spacing:.02em;}
+.brandbar .inst{flex:1;min-width:230px;}
+.brandbar .inst .l{font-size:12.5px;color:var(--ink-soft);line-height:1.35;}
+.brandbar .auth{font-size:12px;color:var(--ink-soft);text-align:right;min-width:210px;line-height:1.55;
+  border-left:1px solid var(--line);padding-left:16px;}
+.brandbar .auth b{color:var(--ink);font-weight:600;}
+@media (max-width:680px){ .brandbar .auth{text-align:left;border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:10px;width:100%;} }
+
+/* ---------- header ---------- */
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:20px;}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;color:var(--brand);
+  font-weight:700;text-transform:uppercase;margin:0 0 6px;}
+.head h1{font-family:var(--font-display);font-weight:700;font-size:clamp(24px,3.3vw,37px);
+  line-height:1.08;margin:0;letter-spacing:normal;}
+.head .sub{color:var(--ink-soft);font-size:15.5px;line-height:1.5;margin:6px 0 0;max-width:60ch;}
+.scorebox{font-family:var(--font-mono);background:var(--panel);border:1px solid var(--line);
+  border-radius:12px;padding:10px 14px;box-shadow:var(--shadow);text-align:right;min-width:150px;}
+.scorebox .lab{font-size:10.5px;letter-spacing:.14em;color:var(--ink-soft);text-transform:uppercase;}
+.scorebox .val{font-size:26px;font-weight:700;color:var(--brand);line-height:1;margin-top:3px;}
+
+/* ---------- layout ---------- */
+.shell{display:grid;grid-template-columns:246px 1fr;gap:22px;align-items:start;}
+.nav{position:sticky;top:14px;display:flex;flex-direction:column;gap:8px;}
+.navbtn{display:flex;gap:12px;align-items:center;text-align:left;background:var(--panel);
+  border:1px solid var(--line);border-radius:12px;padding:11px 13px;cursor:pointer;
+  font-family:var(--font-body);font-size:14.5px;color:var(--ink);transition:.18s;width:100%;box-shadow:var(--shadow);}
+.navbtn .n{font-family:var(--font-mono);font-weight:700;font-size:12px;color:var(--ink-soft);
+  border:1.5px solid var(--line);border-radius:8px;min-width:30px;height:30px;display:grid;place-items:center;transition:.18s;flex:none;}
+.navbtn .t{font-weight:500;line-height:1.2;}
+.navbtn .t small{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;color:var(--ink-soft);text-transform:uppercase;margin-top:2px;}
+.navbtn:hover{border-color:#bfc4bd;transform:translateY(-1px);}
+.navbtn.active{background:var(--brand);border-color:var(--brand);color:#fff;}
+.navbtn.active .n{border-color:rgba(255,255,255,.55);color:#fff;}
+.navbtn.active .t small{color:rgba(255,255,255,.7);}
+.navbtn.done .n{background:var(--good-soft);border-color:var(--good);color:var(--good);}
+.navbtn.active.done .n{background:rgba(255,255,255,.2);border-color:#fff;color:#fff;}
+
+.stage{min-width:0;}
+.panel{display:none;animation:fade .25s ease;}
+.panel.show{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ---------- generic blocks ---------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:20px 22px;box-shadow:var(--shadow);margin-bottom:18px;}
+.kicker{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--brand);font-weight:700;margin:0 0 8px;}
+h2.title{font-family:var(--font-display);font-weight:700;font-size:clamp(21px,2.5vw,28px);margin:0 0 4px;letter-spacing:normal;}
+.lead{color:var(--ink-soft);font-size:16px;line-height:1.55;margin:8px 0 0;}
+p{margin:0 0 10px;}
+.btn{font-family:var(--font-body);font-weight:600;font-size:14px;border-radius:10px;
+  border:1px solid var(--ink);background:var(--ink);color:#fff;padding:10px 16px;cursor:pointer;transition:.16s;}
+.btn:hover{transform:translateY(-1px);opacity:.93;}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+.btn.ghost:hover{border-color:var(--ink);}
+.btn.brand{background:var(--brand);border-color:var(--brand);}
+.btn.armN{background:var(--armN);border-color:var(--armN);}
+.btn.armR{background:var(--armR);border-color:var(--armR);}
+.btn.info{background:var(--info);border-color:var(--info);}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px;}
+.tag{font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.04em;
+  padding:3px 9px;border-radius:999px;display:inline-block;text-transform:uppercase;}
+.tag.good{background:var(--good-soft);color:var(--good);}
+.tag.bad{background:var(--bad-soft);color:var(--bad);}
+.tag.info{background:var(--info-soft);color:var(--info);}
+.tag.neutral{background:var(--panel-2);color:var(--ink-soft);}
+.note{font-size:13.5px;color:var(--ink-soft);}
+.hr{height:1px;background:var(--line);border:0;margin:16px 0;}
+details.anim{margin-top:14px;border-top:1px dashed var(--line);padding-top:10px;}
+details.anim summary{cursor:pointer;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;
+  color:var(--ink-soft);font-weight:700;text-transform:uppercase;list-style:none;}
+details.anim summary::-webkit-details-marker{display:none}
+details.anim summary::before{content:"▸ ";color:var(--brand);}
+details.anim[open] summary::before{content:"▾ ";}
+details.anim .body{margin-top:8px;font-size:15px;line-height:1.55;color:var(--ink-soft);background:var(--brand-soft);
+  border-radius:10px;padding:12px 14px;}
+.verdict{margin-top:14px;border-radius:12px;padding:14px 16px;font-size:15.5px;line-height:1.5;}
+.verdict.bad{background:var(--bad-soft);border:1px solid #e6b5ad;}
+.verdict.good{background:var(--good-soft);border:1px solid #aed7bf;}
+.verdict.info{background:var(--info-soft);border:1px solid #b7d3e2;}
+.verdict.neutral{background:var(--panel-2);border:1px solid var(--line);}
+.verdict b{font-weight:600;}
+
+/* ---------- molecule hero ---------- */
+.mol{display:grid;grid-template-columns:118px 1fr;gap:18px;align-items:center;}
+.molbadge{border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,var(--brand-soft),#fff);
+  aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px;}
+.molbadge .ring{width:54px;height:54px;border-radius:50%;border:3px solid var(--brand);position:relative;margin-bottom:8px;}
+.molbadge .ring::before{content:"";position:absolute;inset:9px;border-radius:50%;border:2px solid var(--armN);}
+.molbadge .ring::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;border-radius:50%;background:var(--brand);transform:translate(-50%,-50%);}
+.molbadge .code{font-family:var(--font-mono);font-weight:700;font-size:13px;color:var(--brand);}
+.molbadge .pill{width:66px;height:66px;object-fit:contain;margin-bottom:9px;
+  filter:drop-shadow(0 3px 6px rgba(20,30,25,.18));animation:pillIn .5s cubic-bezier(.2,.8,.2,1);}
+@keyframes pillIn{from{opacity:0;transform:scale(.6) rotate(-12deg)}to{opacity:1;transform:none}}
+.molmeta{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 18px;}
+.molmeta .k{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+.molmeta .v{font-size:15.5px;font-weight:500;margin-top:2px;}
+@media (max-width:560px){ .mol{grid-template-columns:1fr;} .molmeta{grid-template-columns:1fr;} }
+
+/* ---------- pipeline spine ---------- */
+.pipe{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;}
+.pstage{flex:1;min-width:88px;border:1px solid var(--line);border-radius:12px;padding:10px;background:var(--panel-2);
+  text-align:center;position:relative;transition:.18s;}
+.pstage .ph{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;}
+.pstage .pn{font-family:var(--font-display);font-weight:700;font-size:15px;margin-top:3px;}
+.pstage .pv{font-family:var(--font-mono);font-size:12px;color:var(--brand);margin-top:4px;}
+.pstage.on{background:var(--brand-soft);border-color:var(--brand);}
+.pstage.done{background:var(--good-soft);border-color:var(--good);}
+.pstage.done .pv{color:var(--good);}
+
+/* ---------- preclinical cards ---------- */
+.studygrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;}
+.study{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--panel);transition:.18s;}
+.study .st{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+.study .st .name{font-family:var(--font-display);font-weight:700;font-size:15.5px;}
+.study .aim{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin:6px 0 0;}
+.study .res{font-size:14px;line-height:1.5;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);display:none;}
+.study.done{border-color:var(--good);background:var(--good-soft);}
+.study.done .res{display:block;}
+.study .res b{font-weight:600;}
+.gate{border:2px dashed var(--line);border-radius:14px;padding:16px;text-align:center;margin-top:14px;transition:.2s;}
+.gate.open{border-style:solid;border-color:var(--good);background:var(--good-soft);}
+.gatebar{height:10px;border-radius:999px;background:var(--panel-2);overflow:hidden;margin:10px 0;}
+.gatebar > span{display:block;height:100%;width:0;background:var(--brand);transition:width .4s ease;}
+
+/* ---------- PICO / quiz ---------- */
+.scn{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px;background:var(--panel);}
+.scn .qn{font-family:var(--font-mono);font-size:11px;color:var(--brand);font-weight:700;letter-spacing:.08em;}
+.scn .q{font-size:16.5px;line-height:1.5;margin:6px 0 12px;}
+.opts{display:flex;flex-wrap:wrap;gap:8px;}
+.opt{font-family:var(--font-body);font-size:14.5px;font-weight:500;border:1.5px solid var(--line);
+  background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer;transition:.14s;color:var(--ink);}
+.opt:hover{border-color:var(--ink);}
+.opt.correct{background:var(--good-soft);border-color:var(--good);color:var(--good);font-weight:600;}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);color:var(--bad);}
+.opt:disabled{cursor:default;}
+.rat{margin-top:12px;border-radius:10px;padding:13px 15px;font-size:14.8px;line-height:1.55;display:none;background:var(--panel-2);border:1px solid var(--line);}
+.rat.show{display:block;}
+.rat .lab{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;}
+.picostmt{font-family:var(--font-mono);font-size:14.5px;background:var(--panel-2);border:1px solid var(--line);
+  border-radius:12px;padding:15px 16px;margin-top:8px;line-height:1.85;}
+.picostmt .slot{font-family:var(--font-body);font-weight:600;color:var(--cloud);border-bottom:2px dotted var(--cloud);padding:0 2px;}
+.picostmt .slot.filled{color:var(--brand);border-bottom-color:var(--brand);}
+
+/* ---------- readouts / bars ---------- */
+.readouts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+.readout{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--panel);text-align:center;}
+.readout.N{border-top:4px solid var(--armN);}
+.readout.R{border-top:4px solid var(--armR);}
+.readout .lab{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);}
+.readout .big{font-family:var(--font-mono);font-weight:700;font-size:38px;line-height:1;margin:6px 0 2px;}
+.readout.N .big{color:var(--armN);}
+.readout.R .big{color:var(--armR);}
+.readout .frac{font-family:var(--font-mono);font-size:13px;color:var(--ink-soft);}
+
+/* ---------- dose escalation ---------- */
+.doseladder{display:flex;flex-direction:column-reverse;gap:6px;margin-top:14px;}
+.drow{display:grid;grid-template-columns:74px 1fr 150px;gap:10px;align-items:center;border:1px solid var(--line);
+  border-radius:11px;padding:9px 12px;background:var(--panel-2);opacity:.5;transition:.2s;}
+.drow.tested{opacity:1;background:var(--panel);}
+.drow.current{opacity:1;border-color:var(--brand);box-shadow:0 0 0 2px var(--brand-soft) inset;}
+.drow.mtd{border-color:var(--good);background:var(--good-soft);opacity:1;}
+.drow.toxic{border-color:var(--bad);background:var(--bad-soft);opacity:1;}
+.drow .dl{font-family:var(--font-mono);font-weight:700;font-size:14px;}
+.subjects{display:flex;gap:4px;flex-wrap:wrap;}
+.subj{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-size:11px;
+  background:var(--armN-soft);border:1px solid #acd6c8;color:var(--armN);font-family:var(--font-mono);font-weight:700;}
+.subj.dlt{background:var(--bad-soft);border-color:#e2a89f;color:var(--bad);}
+.subj.empty{background:transparent;border:1px dashed var(--line);color:transparent;}
+.drow .dstat{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);text-align:right;}
+.drow .dstat b{color:var(--ink);}
+.drow .dstat .kv{font-weight:700;}
+.kv.norm{color:var(--armN);} .kv.high{color:var(--armR);} .kv.sev{color:var(--bad);}
+.dosepick{margin-top:14px;border:1px dashed var(--brand);border-radius:12px;padding:14px 16px;background:var(--brand-soft);}
+.dosepick .pick-h{font-size:15px;margin-bottom:10px;}
+.pickrow{display:flex;flex-wrap:wrap;gap:8px;}
+.pickdose{font-family:var(--font-mono);font-weight:700;font-size:14px;border:1.5px solid var(--line);
+  background:#fff;border-radius:10px;padding:9px 14px;cursor:pointer;transition:.14s;color:var(--ink);}
+.pickdose:hover{border-color:var(--brand);}
+.pickdose.sel{background:var(--brand);border-color:var(--brand);color:#fff;}
+.pickdose:disabled{opacity:.55;cursor:default;}
+
+/* ---------- dose response ---------- */
+.drbars{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px;align-items:end;height:230px;}
+.drbar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;cursor:pointer;}
+.drbar .stack{width:100%;display:flex;flex-direction:column-reverse;align-items:center;height:100%;justify-content:flex-end;}
+.drbar .eff{width:70%;background:var(--armN);border-radius:7px 7px 0 0;height:0;transition:height .7s cubic-bezier(.2,.7,.2,1);
+  display:flex;align-items:flex-start;justify-content:center;color:#fff;font-family:var(--font-mono);font-weight:700;font-size:12px;padding-top:4px;}
+.drbar .klab{font-family:var(--font-mono);font-size:11px;margin-top:6px;}
+.drbar .dn{font-family:var(--font-mono);font-weight:700;font-size:13.5px;margin-top:8px;}
+.drbar .kdot{font-size:11px;color:var(--armR);font-weight:700;}
+.drbar.sel{outline:2px solid var(--brand);outline-offset:3px;border-radius:8px;}
+.draxis{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);text-align:center;margin-top:6px;}
+
+/* ---------- sample size ---------- */
+.ssgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start;}
+.slider-row{margin-bottom:16px;}
+.slider-row .sl-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px;}
+.slider-row .sl-h .lbl{font-size:15px;font-weight:500;}
+.slider-row .sl-h .lbl small{display:block;color:var(--ink-soft);font-size:12.5px;font-weight:400;}
+.slider-row .sl-h .num{font-family:var(--font-mono);font-weight:700;font-size:16px;color:var(--brand);}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:999px;
+  background:var(--line);outline:none;cursor:pointer;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:50%;
+  background:var(--brand);border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.25);cursor:pointer;}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--brand);border:3px solid #fff;cursor:pointer;}
+.segbtns{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+.segbtns button{font-family:var(--font-mono);font-size:13px;font-weight:700;border:0;background:#fff;color:var(--ink-soft);
+  padding:7px 13px;cursor:pointer;transition:.14s;}
+.segbtns button.on{background:var(--brand);color:#fff;}
+.ssout{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--panel);text-align:center;}
+.ssout .nbig{font-family:var(--font-mono);font-weight:700;font-size:46px;line-height:1;color:var(--brand);}
+.ssout .nlab{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;}
+.ssout .perarm{font-family:var(--font-mono);font-size:13px;color:var(--ink-soft);margin-top:8px;}
+.feasbar{height:14px;border-radius:999px;background:var(--panel-2);overflow:hidden;margin-top:14px;position:relative;}
+.feasbar > span{display:block;height:100%;border-radius:999px;transition:width .4s ease,background .3s;}
+.feasbar .ceil{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink);}
+
+/* ---------- CI number line ---------- */
+.ciscn{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.cibtn{font-family:var(--font-body);font-size:14px;font-weight:500;border:1.5px solid var(--line);background:#fff;
+  border-radius:10px;padding:9px 13px;cursor:pointer;transition:.14s;text-align:left;}
+.cibtn:hover{border-color:var(--ink);}
+.cibtn.on{border-color:var(--brand);background:var(--brand-soft);color:var(--brand);font-weight:600;}
+.cibtn small{display:block;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);margin-top:2px;}
+.cibtn.on small{color:var(--brand);}
+.axisbox{border:1px solid var(--line);border-radius:14px;padding:26px 20px 18px;background:var(--panel);margin-top:6px;}
+.axis{position:relative;height:96px;}
+.axisline{position:absolute;left:0;right:0;top:54px;height:2px;background:var(--line);}
+.zero{position:absolute;top:18px;bottom:6px;width:2px;background:var(--bad);}
+.zero .zlab{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:10px;color:var(--bad);white-space:nowrap;font-weight:700;}
+.mcid{position:absolute;top:30px;bottom:18px;width:2px;border-left:2px dashed var(--info);}
+.mcid .mlab{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:9.5px;color:var(--info);white-space:nowrap;font-weight:700;}
+.cibar{position:absolute;top:46px;height:18px;background:var(--armN-soft);border:2px solid var(--armN);border-radius:6px;transition:.5s;}
+.cipoint{position:absolute;top:42px;width:14px;height:26px;background:var(--armN);border-radius:4px;transform:translateX(-50%);transition:.5s;}
+.ticks{position:absolute;left:0;right:0;top:62px;font-family:var(--font-mono);font-size:10px;color:var(--ink-soft);}
+.ticks span{position:absolute;transform:translateX(-50%);}
+.civerdict{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+.civ{border:1px solid var(--line);border-radius:12px;padding:13px;text-align:center;}
+.civ .vl{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+.civ .vv{font-family:var(--font-display);font-weight:700;font-size:16px;margin-top:5px;}
+.civ.yes{background:var(--good-soft);border-color:var(--good);} .civ.yes .vv{color:var(--good);}
+.civ.no{background:var(--bad-soft);border-color:var(--bad);} .civ.no .vv{color:var(--bad);}
+
+/* ---------- pharmacovigilance ---------- */
+.pvstages{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;}
+.pvstage{border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;background:var(--panel-2);transition:.2s;}
+.pvstage.on{background:var(--brand-soft);border-color:var(--brand);}
+.pvstage .pe{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;}
+.pvstage .pn{font-family:var(--font-mono);font-weight:700;font-size:18px;margin-top:4px;}
+.pvstage .pc{font-family:var(--font-mono);font-size:12px;margin-top:4px;color:var(--ink-soft);}
+.pvstage.on .pc{color:var(--brand);font-weight:700;}
+.pvfield{border:1px dashed var(--line);border-radius:14px;padding:14px;margin-top:14px;background:#fff;min-height:120px;}
+.pvfield .h{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin-bottom:10px;}
+.pvdots{display:flex;flex-wrap:wrap;gap:4px;}
+.pvdot{width:9px;height:9px;border-radius:2px;background:var(--panel-2);}
+.pvdot.case{background:var(--bad);animation:pop .25s ease;}
+@keyframes pop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* ---------- attrition funnel (synthèse) ---------- */
+.funnel{display:flex;flex-direction:column;align-items:center;gap:5px;margin:6px auto 0;max-width:680px;}
+.frung{border-radius:8px;padding:11px 14px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;}
+.frung .fl{font-family:var(--font-display);font-weight:700;}
+.frung .fn{font-family:var(--font-mono);font-weight:700;}
+.synthlist{display:grid;gap:12px;margin-top:6px;}
+.synthrow{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--panel);}
+.synthrow .ic{font-family:var(--font-mono);font-weight:700;color:#fff;background:var(--brand);min-width:34px;height:34px;
+  border-radius:9px;display:grid;place-items:center;flex:none;}
+.synthrow h4{font-family:var(--font-display);margin:0 0 4px;font-size:16px;}
+.synthrow p{margin:0;font-size:14px;color:var(--ink-soft);}
+
+/* ---------- accueil tiles ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px;}
+.steptile{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--panel-2);}
+.steptile .num{font-family:var(--font-mono);font-weight:700;color:var(--brand);font-size:13px;}
+.steptile h3{font-family:var(--font-display);font-size:18px;margin:6px 0 6px;}
+.steptile p{font-size:14.5px;line-height:1.5;color:var(--ink-soft);margin:0;}
+
+@media (max-width:880px){
+  .shell{grid-template-columns:1fr;}
+  .nav{position:static;flex-direction:row;overflow-x:auto;padding-bottom:4px;}
+  .navbtn{min-width:186px;}
+  .studygrid,.readouts,.ssgrid,.steps,.civerdict,.drbars{grid-template-columns:1fr;}
+  .drbars{height:auto;}
+  .pvstages{grid-template-columns:1fr 1fr;}
+  .drow{grid-template-columns:60px 1fr;}
+  .drow .dstat{grid-column:1/-1;text-align:left;}
+}
+@media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important;} }
+</style>
+</head>
+<body>
+<div class="bg-deco" aria-hidden="true">
+  <svg class="mol a" width="330" height="330" viewBox="0 0 240 240" fill="none" stroke="#8E1B3F" stroke-width="3">
+    <polygon points="120,44 178,78 178,146 120,180 62,146 62,78"/>
+    <circle cx="120" cy="112" r="33"/>
+    <line x1="120" y1="44" x2="120" y2="12"/><circle cx="120" cy="9" r="7"/>
+    <line x1="178" y1="78" x2="209" y2="60"/><circle cx="211" cy="58" r="7"/>
+    <line x1="62" y1="146" x2="31" y2="164"/><circle cx="29" cy="166" r="7"/>
+  </svg>
+  <svg class="mol b" width="260" height="260" viewBox="0 0 240 240" fill="none" stroke="#0E7C66" stroke-width="3">
+    <polygon points="120,44 178,78 178,146 120,180 62,146 62,78"/>
+    <circle cx="120" cy="112" r="33"/>
+    <line x1="120" y1="180" x2="120" y2="212"/><circle cx="120" cy="214" r="7"/>
+    <line x1="178" y1="146" x2="209" y2="164"/><circle cx="211" cy="166" r="7"/>
+  </svg>
+  <svg class="mol c" width="200" height="200" viewBox="0 0 240 240" fill="none" stroke="#8E1B3F" stroke-width="3">
+    <polygon points="120,50 174,82 174,146 120,178 66,146 66,82"/>
+    <circle cx="120" cy="114" r="30"/>
+  </svg>
+</div>
+<div class="app">
+
+  <!-- INSTITUTIONAL BANNER -->
+  <div class="brandbar">
+    <div class="logo">
+      <img id="ujkzLogo" src="data:image/jpeg;base64,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" alt="Université Joseph Ki-Zerbo"
+           onerror="this.style.display='none';document.getElementById('logoFallback').style.display='grid';">
+      <div id="logoFallback" class="logofallback" style="display:none">UJKZ</div>
+    </div>
+    <div class="inst">
+      <div class="l">UFR / SDS — Département des Sciences pharmaceutiques appliquées<br>Laboratoire de Pharmacologie</div>
+    </div>
+    <div class="auth">
+      <b>Pr OUEDRAOGO Moussa</b><br>Pr Titulaire, Pharmacologie<br>
+      <b>Dr YAMEOGO T. Boris</b><br>Assistant, Pharmacie Hospitalière
+    </div>
+  </div>
+
+  <header class="head">
+    <div>
+      <p class="eyebrow">Atelier interactif · TD · essais cliniques — partie 2</p>
+      <h1>Du laboratoire au patient&nbsp;: développer un nouvel anti-HTA</h1>
+      <p class="sub">Vous prenez en main une molécule fictive, <b>KZ-117 (« néravadine »)</b>, et vous la conduisez à travers toutes les étapes du développement&nbsp;: préclinique, phases I à III, autorisation, pharmacovigilance. Une décision, un jeu, à chaque étape.</p>
+    </div>
+    <div class="scorebox">
+      <div class="lab">Score développement</div>
+      <div class="val"><span id="score">0</span>/20</div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <nav class="nav" id="nav">
+      <button class="navbtn active" data-go="accueil"><span class="n">·</span><span class="t">La molécule<small>Mission</small></span></button>
+      <button class="navbtn" data-go="preclin"><span class="n">1</span><span class="t">Préclinique<small>Avant l'Homme</small></span></button>
+      <button class="navbtn" data-go="pico"><span class="n">2</span><span class="t">Question & PICO<small>Protocole</small></span></button>
+      <button class="navbtn" data-go="p1"><span class="n">3</span><span class="t">Phase I<small>Dose & sécurité</small></span></button>
+      <button class="navbtn" data-go="p2"><span class="n">4</span><span class="t">Phase II<small>Dose-réponse</small></span></button>
+      <button class="navbtn" data-go="p3"><span class="n">5</span><span class="t">Phase III<small>Essai pivot</small></span></button>
+      <button class="navbtn" data-go="ci"><span class="n">6</span><span class="t">Lire le résultat<small>IC à 95 %</small></span></button>
+      <button class="navbtn" data-go="pv"><span class="n">7</span><span class="t">AMM & Phase IV<small>Pharmacovigilance</small></span></button>
+      <button class="navbtn" data-go="synth"><span class="n">✓</span><span class="t">Synthèse<small>Le parcours</small></span></button>
+    </nav>
+
+    <main class="stage">
+
+      <!-- ========== ACCUEIL ========== -->
+      <section class="panel show" id="accueil">
+        <div class="card">
+          <p class="kicker">Le candidat-médicament</p>
+          <div class="mol">
+            <div class="molbadge">
+              <img class="pill" src="data:image/png;base64,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" alt="Gélule néravadine (illustration)">
+              <div class="code">KZ-117</div>
+            </div>
+            <div>
+              <h2 class="title" style="margin-bottom:8px">« Néravadine »</h2>
+              <div class="molmeta">
+                <div><div class="k">Classe</div><div class="v">Inhibiteur de l'aldostérone synthase (CYP11B2)</div></div>
+                <div><div class="k">Mécanisme</div><div class="v">↓ synthèse d'aldostérone → ↓ rétention sodée → ↓ pression artérielle</div></div>
+                <div><div class="k">Indication visée</div><div class="v">En association, quand une bithérapie bien conduite ne suffit pas — passage en trithérapie</div></div>
+                <div><div class="k">Voie</div><div class="v">Orale, une prise par jour</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="verdict info" style="margin-top:16px"><span class="tag info">Pédagogique</span> KZ-117 / néravadine est une molécule <b>fictive</b>, inventée pour cet atelier. Les chiffres sont vraisemblables mais ne décrivent aucun produit réel.</div>
+        </div>
+
+        <div class="card">
+          <p class="kicker">Le parcours — de l'idée à l'ordonnance</p>
+          <h2 class="title">Chaque étape est un filtre</h2>
+          <p class="lead">Sur ~10 000 molécules criblées, une seule atteindra le patient. À chaque phase, une question, un jeu, une décision « go / no-go ». Suivez la barre de progression&nbsp;: elle se remplit à mesure que KZ-117 franchit les étapes.</p>
+          <div class="pipe" id="pipe">
+            <div class="pstage" data-stage="preclin"><div class="ph">Étape 1</div><div class="pn">Préclinique</div><div class="pv">in vitro / animal</div></div>
+            <div class="pstage" data-stage="p1"><div class="ph">Étape 3</div><div class="pn">Phase I</div><div class="pv">~30–60 sains</div></div>
+            <div class="pstage" data-stage="p2"><div class="ph">Étape 4</div><div class="pn">Phase II</div><div class="pv">~200 patients</div></div>
+            <div class="pstage" data-stage="p3"><div class="ph">Étape 5</div><div class="pn">Phase III</div><div class="pv">~300+ patients</div></div>
+            <div class="pstage" data-stage="pv"><div class="ph">Étape 7</div><div class="pn">AMM · Phase IV</div><div class="pv">vie réelle</div></div>
+          </div>
+          <div class="steps" style="margin-top:18px">
+            <div class="steptile"><div class="num">ÉTAPES 1 · 2</div><h3>Avant l'Homme & protocole</h3><p>Constituez le dossier préclinique, puis formulez la question de recherche en PICO et choisissez le critère de jugement.</p></div>
+            <div class="steptile"><div class="num">ÉTAPES 3 · 4 · 5</div><h3>Les trois phases cliniques</h3><p>Trouvez la dose (escalade), tracez la courbe dose-réponse, dimensionnez et lancez l'essai pivot.</p></div>
+            <div class="steptile"><div class="num">ÉTAPES 6 · 7</div><h3>Lire & surveiller</h3><p>Interprétez l'intervalle de confiance, puis traquez l'effet indésirable rare en vie réelle.</p></div>
+          </div>
+          <div class="btnrow"><button class="btn brand" data-go="preclin">Étape 1 — entrer au laboratoire →</button></div>
+        </div>
+      </section>
+
+      <!-- ========== ÉTAPE 1 : PRÉCLINIQUE ========== -->
+      <section class="panel" id="preclin">
+        <div class="card">
+          <p class="kicker">Étape 1 — Développement préclinique (non-clinique)</p>
+          <h2 class="title">Constituer le dossier avant le premier Homme</h2>
+          <p class="lead">Aucune administration humaine n'est permise tant que la sécurité et le comportement de la molécule ne sont pas documentés chez l'animal et in vitro. <b>Réalisez les six études requises</b>&nbsp;: chacune complète le dossier déposé au comité d'éthique et à l'autorité de réglementation.</p>
+          <div class="studygrid" id="studyGrid"></div>
+          <div class="gate" id="gate">
+            <div class="gatebar"><span id="gateBar"></span></div>
+            <div id="gateText"><b id="gateCount">0</b> / 6 études réalisées — le dossier est incomplet.</div>
+            <div class="btnrow" style="justify-content:center;display:none" id="gateBtnRow">
+              <button class="btn good brand" id="submitDossier" disabled>Déposer le dossier → demander l'autorisation</button>
+              <button class="btn ghost" id="preclinResetBtn">↺ Réinitialiser</button>
+            </div>
+          </div>
+          <div class="verdict good" id="preclinDone" style="display:none"></div>
+          <details class="anim">
+            <summary>Rappel — à retenir</summary>
+            <div class="body">L'idée à retenir est celle du <b>verrou (gate)</b>&nbsp;: on ne passe jamais à l'Homme sans pharmacodynamie, ADME, toxicologie à doses répétées, génotoxicité, sécurité cardiaque (hERG/QT) et toxicologie de la reproduction. La majorité des molécules échouent <i>ici</i>, avant même la phase I.</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ========== ÉTAPE 2 : QUESTION & PICO ========== -->
+      <section class="panel" id="pico">
+        <div class="card">
+          <p class="kicker">Étape 2 — Question de recherche & conception</p>
+          <h2 class="title">Formuler la question, puis concevoir l'essai</h2>
+          <p class="lead">Un essai répond à <b>une</b> question précise. Construisez-la pièce par pièce&nbsp;: Population, Intervention, Comparateur, Outcome (critère). La phrase se complète au fur et à mesure.</p>
+          <div class="picostmt" id="picoStmt">
+            Chez <span class="slot" data-slot="P">[Population]</span>,
+            l'ajout de <span class="slot" data-slot="I">[Intervention]</span>
+            comparé à <span class="slot" data-slot="C">[Comparateur]</span>
+            réduit-il <span class="slot" data-slot="O">[Critère de jugement]</span>&nbsp;?
+          </div>
+          <div id="picoList" style="margin-top:16px"></div>
+        </div>
+        <div class="card">
+          <p class="kicker">Hypothèse & critère principal</p>
+          <div id="hypoList"></div>
+        </div>
+        <div class="card">
+          <p class="kicker">Concevoir l'essai contrôlé randomisé</p>
+          <h2 class="title" style="font-size:clamp(18px,2vw,22px)">Qui, comment, en aveugle&nbsp;?</h2>
+          <p class="lead">Au-delà de la question, trois choix de conception fondent la validité de l'essai&nbsp;: la population <b>selon la phase</b>, les modalités d'administration, et la façon de <b>masquer</b> l'attribution du traitement.</p>
+          <div id="rctList" style="margin-top:14px"></div>
+          <div class="btnrow"><button class="btn ghost" id="picoResetBtn">↺ Réinitialiser cette étape</button></div>
+        </div>
+      </section>
+
+      <!-- ========== ÉTAPE 3 : PHASE I ========== -->
+      <section class="panel" id="p1">
+        <div class="card">
+          <p class="kicker">Étape 3 — Essai de phase I (première administration à l'Homme)</p>
+          <h2 class="title">Escalade de dose chez le volontaire sain</h2>
+          <p class="lead">Objectif&nbsp;: la <b>sécurité</b> et la dose, pas l'efficacité. On part de la dose la plus faible, par cohortes de 6 volontaires sains, et on monte palier par palier. On surveille la <b>toxicité dose-limitante</b> (DLT) et surtout la <b>kaliémie</b> (K⁺), principal effet indésirable à mesurer avec cette molécule. Montez tant que c'est sûr — et arrêtez-vous au bon moment.</p>
+          <div class="doseladder" id="doseLadder"></div>
+          <div class="verdict neutral" id="p1Verdict" style="margin-top:14px">Administrez la première cohorte (1 mg) pour commencer.</div>
+          <div class="btnrow">
+            <button class="btn brand" id="p1NextBtn">▶ Administrer la cohorte suivante</button>
+            <button class="btn info" id="p1DeclareBtn" disabled>⊠ Arrêter et déclarer la DMT</button>
+            <button class="btn ghost" id="p1ResetBtn">↺ Recommencer</button>
+          </div>
+          <div class="dosepick" id="p1Picker" style="display:none">
+            <div class="pick-h">D'après vos cohortes, quel palier retenez-vous comme <b>dose maximale tolérée</b> ?</div>
+            <div class="pickrow" id="p1PickRow"></div>
+            <div class="btnrow" style="margin-top:12px"><button class="btn good brand" id="p1ConfirmBtn" disabled>✓ Confirmer la DMT choisie</button></div>
+          </div>
+          <div class="verdict good" id="p1Done" style="display:none;margin-top:14px"></div>
+          <details class="anim">
+            <summary>Rappel — à retenir</summary>
+            <div class="body">Règle simplifiée de type 3+3&nbsp;: tant qu'une cohorte montre &lt; 2 DLT sur 6, on peut escalader&nbsp;; dès qu'un palier atteint ≥ 2 DLT sur 6, il est <b>trop toxique</b> et la DMT est le <b>palier précédent</b>. Surveillez la <b>kaliémie</b> — principal effet indésirable à mesurer — qui grimpe avec la dose, et ne poursuivez pas l'escalade une fois le premier événement indésirable majeur observé.</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ========== ÉTAPE 4 : PHASE II ========== -->
+      <section class="panel" id="p2">
+        <div class="card">
+          <p class="kicker">Étape 4 — Essai de phase II (preuve de concept)</p>
+          <h2 class="title">La courbe dose-réponse</h2>
+          <p class="lead">Premier test chez des <b>patients hypertendus</b>. Quatre doses contre placebo. On cherche le meilleur compromis&nbsp;: l'efficacité (baisse de PAS, barres vertes) augmente avec la dose… mais l'<b>hyperkaliémie</b> (point orange) aussi. Lancez l'essai, puis désignez la dose à porter en phase III.</p>
+          <div class="drbars" id="drBars"></div>
+          <div class="draxis">Baisse de PAS corrigée du placebo (mmHg) · le point orange = % d'hyperkaliémie</div>
+          <div class="verdict neutral" id="p2Verdict" style="margin-top:14px">Lancez l'essai de phase II pour révéler la courbe.</div>
+          <div class="btnrow">
+            <button class="btn brand" id="p2RunBtn">▶ Lancer l'essai de phase II</button>
+            <button class="btn ghost" id="p2ResetBtn">Réinitialiser</button>
+          </div>
+          <p class="note" id="p2Hint" style="margin-top:12px;display:none">Cliquez sur une barre pour choisir la dose de phase III.</p>
+          <details class="anim">
+            <summary>Rappel — à retenir</summary>
+            <div class="body">L'effet <b>plafonne</b>&nbsp;: 8 mg apporte presque toute l'efficacité (−9 mmHg) pour une hyperkaliémie encore acceptable (~6 %), tandis que 16 mg ne gagne qu'1 mmHg en doublant le risque (~14 %). À retenir&nbsp;: la « dose maximale tolérée » n'est pas la « dose optimale ». On choisit la dose au meilleur rapport bénéfice/risque.</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ========== ÉTAPE 5 : PHASE III ========== -->
+      <section class="panel" id="p3">
+        <div class="card">
+          <p class="kicker">Étape 5 — Essai pivot de phase III · dimensionnement</p>
+          <h2 class="title">Combien de patients faut-il&nbsp;?</h2>
+          <p class="lead">L'essai confirmatoire doit être assez grand pour <b>démontrer</b> l'effet sans se tromper. Réglez les curseurs et observez l'effectif nécessaire. Trouvez un protocole à la fois <b>puissant</b> (≥ 80 %) et <b>réaliste</b> (sous la capacité de recrutement).</p>
+          <div class="ssgrid">
+            <div>
+              <div class="slider-row">
+                <div class="sl-h"><span class="lbl">Effet minimal à détecter (Δ)<small>baisse de PAS jugée pertinente</small></span><span class="num"><span id="ssDeltaV">5</span> mmHg</span></div>
+                <input type="range" id="ssDelta" min="3" max="12" step="0.5" value="5">
+              </div>
+              <div class="slider-row">
+                <div class="sl-h"><span class="lbl">Variabilité (écart-type σ)<small>dispersion de la réponse</small></span><span class="num"><span id="ssSigmaV">12</span> mmHg</span></div>
+                <input type="range" id="ssSigma" min="8" max="16" step="0.5" value="12">
+              </div>
+              <div class="slider-row">
+                <div class="sl-h"><span class="lbl">Puissance (1 − β)<small>chance de détecter un effet réel</small></span><span class="num"></span></div>
+                <div class="segbtns" id="ssPower">
+                  <button data-v="0.80">80 %</button><button data-v="0.90" class="on">90 %</button><button data-v="0.95">95 %</button>
+                </div>
+              </div>
+              <div class="slider-row">
+                <div class="sl-h"><span class="lbl">Risque α (bilatéral)<small>chance de conclure à tort</small></span><span class="num"></span></div>
+                <div class="segbtns" id="ssAlpha">
+                  <button data-v="0.05" class="on">5 %</button><button data-v="0.01">1 %</button>
+                </div>
+              </div>
+              <div class="slider-row" style="margin-bottom:0">
+                <div class="sl-h"><span class="lbl">Perdus de vue attendus<small>sorties d'essai</small></span><span class="num"><span id="ssDropV">15</span> %</span></div>
+                <input type="range" id="ssDrop" min="0" max="30" step="1" value="15">
+              </div>
+            </div>
+            <div class="ssout">
+              <div class="nbig" id="ssTotal">—</div>
+              <div class="nlab">Patients au total</div>
+              <div class="perarm" id="ssPerArm"></div>
+              <div class="feasbar"><span id="ssFeasBar"></span><span class="ceil" id="ssCeil"></span></div>
+              <div class="note" id="ssFeas" style="margin-top:10px"></div>
+              <div class="btnrow" style="justify-content:center">
+                <button class="btn brand" id="ssLockBtn" disabled>✓ Valider ce protocole</button>
+                <button class="btn ghost" id="p3ResetBtn">↺ Réinitialiser</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="p3RunCard" style="display:none">
+          <p class="kicker">L'essai pivot — randomisé, en double aveugle, contrôlé par placebo</p>
+          <h2 class="title">Lancer l'essai</h2>
+          <p class="lead">Néravadine 8 mg vs placebo, en add-on sur le traitement de fond. Critère principal&nbsp;: variation de la PAS de bureau à 12 semaines. Lancez les inclusions.</p>
+          <div class="btnrow"><button class="btn brand" id="p3RunBtn">▶ Lancer l'essai pivot</button></div>
+          <div class="readouts" id="p3Readouts" style="display:none;margin-top:16px">
+            <div class="readout N"><div class="lab">Néravadine 8 mg</div><div class="big" id="p3RateN">—</div><div class="frac">ΔPAS à S12</div></div>
+            <div class="readout R"><div class="lab">Placebo (add-on)</div><div class="big" id="p3RateR">—</div><div class="frac">ΔPAS à S12</div></div>
+          </div>
+          <div class="verdict good" id="p3Verdict" style="display:none"></div>
+        </div>
+      </section>
+
+      <!-- ========== ÉTAPE 6 : LIRE L'IC ========== -->
+      <section class="panel" id="ci">
+        <div class="card">
+          <p class="kicker">Étape 6 — Lecture critique du résultat</p>
+          <h2 class="title">L'intervalle de confiance dit tout</h2>
+          <p class="lead">Un résultat, ce n'est pas un chiffre&nbsp;: c'est une <b>estimation et son incertitude</b>. Choisissez un scénario et lisez l'IC à 95 % sur l'axe. Deux questions, toujours&nbsp;: l'effet est-il <b>statistiquement significatif</b> (l'IC évite-t-il 0&nbsp;?) et <b>cliniquement pertinent</b> (dépasse-t-il le seuil de ~5 mmHg&nbsp;?).</p>
+          <div class="ciscn" id="ciScn"></div>
+          <div class="axisbox">
+            <div class="axis" id="ciAxis">
+              <div class="axisline"></div>
+              <div class="zero" id="ciZero"><span class="zlab">0 · pas d'effet</span></div>
+              <div class="mcid" id="ciMcid"><span class="mlab">−5 · seuil de pertinence</span></div>
+              <div class="cibar" id="ciBar"></div>
+              <div class="cipoint" id="ciPoint"></div>
+              <div class="ticks" id="ciTicks"></div>
+            </div>
+          </div>
+          <div class="civerdict">
+            <div class="civ" id="civSig"><div class="vl">Significatif statistiquement&nbsp;?</div><div class="vv" id="civSigV">—</div></div>
+            <div class="civ" id="civRel"><div class="vl">Pertinent cliniquement&nbsp;?</div><div class="vv" id="civRelV">—</div></div>
+          </div>
+          <div class="verdict neutral" id="ciVerdict" style="margin-top:14px"></div>
+          <div class="btnrow"><button class="btn ghost" id="ciResetBtn">↺ Réinitialiser cette étape</button></div>
+          <details class="anim">
+            <summary>Rappel — à retenir</summary>
+            <div class="body">Les quatre cas résument les pièges classiques&nbsp;: (A) significatif <i>et</i> pertinent — le profil de notre pivot&nbsp;; (B) significatif mais effet trop petit pour compter — « significatif » n'est pas « pertinent »&nbsp;; (C) IC qui croise 0 — non significatif&nbsp;; (D) estimation forte mais IC très large qui croise 0 — <b>manque de puissance</b>, on ne peut pas conclure. Le cas (D) renvoie au dimensionnement de l'étape 5.</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ========== ÉTAPE 7 : AMM & PHASE IV ========== -->
+      <section class="panel" id="pv">
+        <div class="card">
+          <p class="kicker">Étape 7 — Après l'AMM · Phase IV</p>
+          <h2 class="title">Le signal rare n'apparaît qu'à grande échelle</h2>
+          <p class="lead">L'autorisation est accordée. Mais un essai pivot (~300 exposés) ne peut pas voir un effet indésirable de fréquence <b>1 / 5 000</b>. Étendez l'exposition en vie réelle et regardez l'angio-œdème — invisible jusque-là — émerger. C'est la raison d'être de la pharmacovigilance.</p>
+          <div class="pvstages" id="pvStages"></div>
+          <div class="pvfield">
+            <div class="h">Cas d'angio-œdème observés <span id="pvCaseCount" style="color:var(--bad)">— sur l'exposition cumulée</span></div>
+            <div class="pvdots" id="pvDots"></div>
+          </div>
+          <div class="verdict neutral" id="pvVerdict" style="margin-top:14px">Au stade de l'essai pivot, l'effet rare est presque toujours invisible. Étendez l'exposition.</div>
+          <div class="btnrow">
+            <button class="btn brand" id="pvNextBtn">▶ Étendre l'exposition</button>
+            <button class="btn ghost" id="pvResetBtn">Recommencer</button>
+          </div>
+          <details class="anim">
+            <summary>Rappel — à retenir</summary>
+            <div class="body">Idée clé&nbsp;: pour <b>observer</b> en moyenne un seul cas d'un événement de fréquence 1/5 000, il faut ~5 000 exposés&nbsp;; pour le <b>détecter de façon fiable</b> (plusieurs cas), bien davantage. L'essai pivot, dimensionné pour l'efficacité, est structurellement aveugle aux effets rares — d'où la déclaration spontanée et les études post-AMM (phase IV).</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ========== SYNTHÈSE ========== -->
+      <section class="panel" id="synth">
+        <div class="card">
+          <p class="kicker">Synthèse — l'entonnoir du développement</p>
+          <h2 class="title">Ce que vous venez de piloter</h2>
+          <p class="lead">D'une foule de molécules criblées à une seule sur l'ordonnance&nbsp;: chaque étape a éliminé des candidats et resserré la preuve. Voici l'attrition typique.</p>
+          <div class="funnel" id="funnel"></div>
+          <hr class="hr">
+          <div class="synthlist">
+            <div class="synthrow"><span class="ic">1</span><div><h4>Le préclinique est un filtre, pas une formalité</h4><p>Pharmacodynamie, ADME, toxicologie, génotoxicité, sécurité cardiaque, reproduction&nbsp;: la majorité des molécules échouent avant même le premier Homme.</p></div></div>
+            <div class="synthrow"><span class="ic">2</span><div><h4>Une bonne question fixe tout le protocole</h4><p>Le PICO et le choix du critère principal déterminent la population, le comparateur et la mesure du succès. Supériorité contre placebo, ici, pour prouver un bénéfice add-on.</p></div></div>
+            <div class="synthrow"><span class="ic">3</span><div><h4>Phase I = sécurité et dose, pas efficacité</h4><p>L'escalade trouve la dose maximale tolérée. Monter trop haut est dangereux&nbsp;; s'arrêter trop tôt, inefficace.</p></div></div>
+            <div class="synthrow"><span class="ic">4</span><div><h4>La dose optimale n'est pas la dose maximale</h4><p>La phase II arbitre efficacité contre tolérance. L'effet plafonne&nbsp;; on choisit le meilleur rapport bénéfice/risque, pas le maximum.</p></div></div>
+            <div class="synthrow"><span class="ic">5</span><div><h4>Un essai pivot se dimensionne</h4><p>Effet attendu, variabilité, puissance, risque α et perdus de vue fixent l'effectif. Trop petit, l'essai ne conclut pas&nbsp;; c'est un choix, pas une fatalité.</p></div></div>
+            <div class="synthrow"><span class="ic">6</span><div><h4>Lire l'IC avant la conclusion</h4><p>Significativité statistique (l'IC évite 0) et pertinence clinique (dépasser le seuil) sont deux questions distinctes. Un grand IC qui croise 0 ne conclut pas.</p></div></div>
+            <div class="synthrow"><span class="ic">7</span><div><h4>L'AMM n'est pas la fin</h4><p>Les effets rares n'apparaissent qu'en vie réelle. La pharmacovigilance (phase IV) prolonge l'évaluation tant que le produit est utilisé.</p></div></div>
+          </div>
+          <div class="btnrow"><button class="btn ghost" data-go="accueil">↺ Reprendre le parcours</button></div>
+          <p class="note" style="margin-top:14px">UFR/SDS — Département des Sciences pharmaceutiques appliquées · Laboratoire de Pharmacologie · Université Joseph Ki-Zerbo. Pr OUEDRAOGO Moussa (Pr Titulaire, Pharmacologie) · Dr YAMEOGO T. Boris (Assistant, Pharmacie Hospitalière). Molécule KZ-117 / néravadine fictive, à usage pédagogique.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+/* ===================== CORE ===================== */
+var SCORE_MAX = 20;
+var state = { score:0, done:{}, ssLocked:false, p3Run:false };
+function addScore(n){ state.score += n; if(state.score>SCORE_MAX) state.score=SCORE_MAX; if(state.score<0) state.score=0; document.getElementById('score').textContent = state.score; }
+
+var panels = ['accueil','preclin','pico','p1','p2','p3','ci','pv','synth'];
+function go(id){
+  panels.forEach(function(p){ document.getElementById(p).classList.toggle('show', p===id); });
+  document.querySelectorAll('.navbtn').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-go')===id); });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('[data-go]').forEach(function(b){ b.addEventListener('click', function(){ go(b.getAttribute('data-go')); }); });
+function markDone(navGo){
+  document.querySelectorAll('.navbtn').forEach(function(b){ if(b.getAttribute('data-go')===navGo) b.classList.add('done'); });
+  state.done[navGo]=true;
+  var ps=document.querySelector('.pstage[data-stage="'+navGo+'"]'); if(ps) ps.classList.add('done');
+}
+
+/* ===================== ÉTAPE 1 : PRÉCLINIQUE ===================== */
+var STUDIES = [
+  { id:'pd', name:'Pharmacodynamie', aim:"Confirmer la cible et l'effet sur la PA.", res:"<b>Effet confirmé</b> : inhibition sélective de CYP11B2, baisse dose-dépendante de l'aldostérone et de la PA chez l'animal." },
+  { id:'pk', name:'Pharmacocinétique / ADME', aim:"Absorption, distribution, métabolisme, élimination.", res:"<b>Profil favorable</b> : bonne biodisponibilité orale, demi-vie compatible avec 1 prise/jour, élimination hépatique." },
+  { id:'tox', name:'Toxicologie à doses répétées', aim:"Sécurité d'organe sur 2 espèces, exposition prolongée.", res:"<b>Marge de sécurité acceptable</b> : pas de toxicité d'organe aux doses thérapeutiques projetées." },
+  { id:'gen', name:'Génotoxicité', aim:"Risque mutagène (Ames, micronoyaux).", res:"<b>Négatif</b> : pas de signal mutagène ni clastogène." },
+  { id:'herg', name:'Sécurité cardiaque (hERG / QT)', aim:"Risque d'allongement du QT.", res:"<b>Signal mineur maîtrisé</b> : faible affinité hERG, large marge vs concentrations thérapeutiques." },
+  { id:'repro', name:'Reproduction & développement', aim:"Effets sur la fertilité et l'embryon.", res:"<b>Pas de tératogénicité</b> aux doses testées ; précautions à prévoir en clinique." }
+];
+var preclinSet = {};
+function renderStudies(){
+  document.getElementById('studyGrid').innerHTML = STUDIES.map(function(s){
+    return '<div class="study" id="study_'+s.id+'">'
+      + '<div class="st"><span class="name">'+s.name+'</span><button class="btn ghost" style="padding:6px 11px;font-size:12.5px" data-study="'+s.id+'">Réaliser l\'étude</button></div>'
+      + '<div class="aim">'+s.aim+'</div>'
+      + '<div class="res"><span class="tag good">Réalisée</span> '+s.res+'</div></div>';
+  }).join('');
+  document.querySelectorAll('[data-study]').forEach(function(b){
+    b.addEventListener('click', function(){ doStudy(b.getAttribute('data-study'), b); });
+  });
+  document.getElementById('gateBtnRow').style.display='flex';
+}
+function doStudy(id, btn){
+  if(preclinSet[id]) return;
+  preclinSet[id]=true;
+  document.getElementById('study_'+id).classList.add('done');
+  btn.disabled=true; btn.textContent='✓ Réalisée'; btn.classList.remove('ghost');
+  var n=Object.keys(preclinSet).length;
+  document.getElementById('gateBar').style.width=Math.round(n/6*100)+'%';
+  if(n>=6){
+    document.getElementById('gateText').innerHTML='<b>6 / 6</b> — dossier complet. Toutes les pièces réglementaires sont réunies.';
+    document.getElementById('submitDossier').disabled=false;
+  } else {
+    document.getElementById('gateText').innerHTML='<b>'+n+'</b> / 6 études réalisées — le dossier est incomplet.';
+  }
+}
+document.getElementById('submitDossier').addEventListener('click', function(){
+  if(Object.keys(preclinSet).length<6) return;
+  document.getElementById('gate').classList.add('open');
+  this.disabled=true; this.textContent='✓ Dossier déposé';
+  var d=document.getElementById('preclinDone');
+  d.style.display='block';
+  d.innerHTML='<span class="tag good">GO — autorisation accordée</span> Le comité d\'éthique et l\'autorité de réglementation autorisent la première administration à l\'Homme. KZ-117 entre en phase clinique.';
+  if(!state.done['preclin']){ addScore(2); markDone('preclin'); }
+});
+function preclinReset(){
+  preclinSet = {};
+  renderStudies();
+  document.getElementById('gate').classList.remove('open');
+  document.getElementById('gateBar').style.width='0';
+  document.getElementById('gateText').innerHTML='<b id="gateCount">0</b> / 6 études réalisées — le dossier est incomplet.';
+  var sd=document.getElementById('submitDossier'); sd.disabled=true; sd.textContent='Déposer le dossier → demander l\'autorisation';
+  var d=document.getElementById('preclinDone'); d.style.display='none'; d.innerHTML='';
+}
+document.getElementById('preclinResetBtn').addEventListener('click', preclinReset);
+
+/* ===================== ÉTAPE 2 : PICO ===================== */
+var PICO = [
+  { slot:'P', qn:'POPULATION', q:'Qui inclure dans l\'essai de phase III ?',
+    opts:[ {t:'Adultes hypertendus non contrôlés malgré ≥ 2 antihypertenseurs', ok:true},
+           {t:'Volontaires sains normotendus', ok:false},
+           {t:'Enfants hypertendus', ok:false} ],
+    fill:'des adultes hypertendus non contrôlés malgré ≥ 2 traitements',
+    rat:'La population doit correspondre à l\'indication visée (HTA non contrôlée). Les volontaires sains relèvent de la phase I ; l\'enfant viendra, le cas échéant, bien plus tard.' },
+  { slot:'I', qn:'INTERVENTION', q:'Dans l\'essai randomisé, comment administrer néravadine ?',
+    opts:[ {t:'8 mg/jour en ajout à la bithérapie de fond (bras trithérapie), dose fixe', ok:true},
+           {t:'En monothérapie, en remplacement du traitement de fond', ok:false},
+           {t:'À dose libre, ajustée par le médecin selon la pression', ok:false} ],
+    fill:'néravadine 8 mg/jour en ajout (trithérapie)',
+    rat:'L\'indication est un <i>ajout</i> quand la bithérapie ne suffit pas&nbsp;: le bras actif reçoit donc une <b>trithérapie</b>. On administre la dose retenue en phase II (8 mg), à <b>dose fixe et standardisée</b> — une posologie libre casserait la comparabilité et le double aveugle.' },
+  { slot:'C', qn:'COMPARATEUR', q:'Comparer à quoi ?',
+    opts:[ {t:'Placebo en ajout au traitement de fond', ok:true},
+           {t:'Aucun comparateur (avant / après)', ok:false},
+           {t:'Un anti-HTA de classe différente', ok:false} ],
+    fill:'un placebo en ajout',
+    rat:'Sans comparateur concurrent, aucune conclusion causale. Le placebo add-on isole l\'effet propre de néravadine au-delà du traitement de fond ; un comparateur actif répondrait à une autre question (non-infériorité).' },
+  { slot:'O', qn:'OUTCOME — CRITÈRE', q:'Que mesurer comme critère principal ?',
+    opts:[ {t:'Variation de la PAS de bureau à 12 semaines', ok:true},
+           {t:'Mortalité cardiovasculaire à 10 ans', ok:false},
+           {t:'Satisfaction du patient', ok:false} ],
+    fill:'la PAS de bureau à 12 semaines',
+    rat:'Un critère intermédiaire validé, mesurable à court terme, adapté à un essai d\'enregistrement. La mortalité à 10 ans est un critère de long terme (essais de morbi-mortalité ultérieurs) ; la satisfaction est trop subjective comme critère principal.' }
+];
+var HYPO = [
+  { slot:null, qn:'HYPOTHÈSE', q:'Quelle hypothèse contre placebo ?',
+    opts:[ {t:'Supériorité', ok:true}, {t:'Non-infériorité', ok:false}, {t:'Équivalence', ok:false} ],
+    rat:'Contre placebo, on veut prouver un bénéfice <b>en plus</b> : c\'est une hypothèse de supériorité. La non-infériorité se teste contre un comparateur <i>actif</i> déjà efficace.' }
+];
+var RCT = [
+  { slot:null, qn:'PARTICIPANTS SELON LA PHASE', q:'Selon la phase, qui reçoit néravadine ?',
+    opts:[ {t:'Phase I : volontaires sains ; phases II–III : patients hypertendus', ok:true},
+           {t:'Toutes les phases : volontaires sains', ok:false},
+           {t:'Toutes les phases : patients hypertendus', ok:false} ],
+    rat:'La <b>phase I</b> cherche la sécurité et la dose&nbsp;: on l\'étudie chez le <b>volontaire sain</b> (sous surveillance étroite). Dès la <b>phase II</b> et en <b>phase III</b>, on teste l\'efficacité chez les <b>patients</b> correspondant à l\'indication. La population change donc avec l\'objectif de la phase.' },
+  { slot:null, qn:'MISE EN AVEUGLE', q:'Comment masquer l\'attribution du traitement ?',
+    opts:[ {t:'Double aveugle : placebo d\'aspect identique, patient et évaluateur en insu', ok:true},
+           {t:'Essai ouvert : chacun connaît le bras attribué', ok:false},
+           {t:'Simple aveugle : seul le patient ignore le bras', ok:false} ],
+    rat:'Le critère (pression artérielle) est sensible à l\'attente du patient comme de l\'évaluateur. Le <b>double aveugle</b>, avec un placebo d\'aspect identique, neutralise ces biais de comportement et de mesure. L\'essai ouvert ou simple aveugle les laisse passer.' },
+  { slot:null, qn:'RANDOMISATION', q:'Faut-il une randomisation adaptative « play the winner » ?',
+    opts:[ {t:'Non : pour un essai pivot confirmatoire, on garde une allocation fixe 1:1', ok:true},
+           {t:'Oui : pour mettre moins de patients sous placebo', ok:false},
+           {t:'Oui : pour accélérer les inclusions', ok:false} ],
+    rat:'Le « play the winner » déplace progressivement l\'allocation vers le bras qui semble gagner au fil des données. Séduisant sur le plan éthique, il <b>fragilise la comparabilité et l\'inférence</b> d\'un essai d\'enregistrement. Pour un pivot confirmatoire, on privilégie une <b>allocation fixe équilibrée (1:1)</b>, plus robuste.' }
+];
+function renderPico(){
+  document.getElementById('picoList').innerHTML = PICO.map(function(s,i){ return scnHTML('pico',i,s); }).join('');
+  document.getElementById('hypoList').innerHTML = HYPO.map(function(s,i){ return scnHTML('hypo',i,s); }).join('');
+  document.getElementById('rctList').innerHTML = RCT.map(function(s,i){ return scnHTML('rct',i,s); }).join('');
+  bindScn('pico', PICO, picoAfter);
+  bindScn('hypo', HYPO, picoAfter);
+  bindScn('rct', RCT, picoAfter);
+}
+function scnHTML(ns,i,s){
+  var opts = s.opts.map(function(o,j){ return '<button class="opt" data-ns="'+ns+'" data-i="'+i+'" data-j="'+j+'">'+o.t+'</button>'; }).join('');
+  return '<div class="scn"><div class="qn">'+s.qn+'</div><div class="q">'+s.q+'</div><div class="opts">'+opts+'</div>'
+    +'<div class="rat" id="rat_'+ns+'_'+i+'"><span class="lab">Pourquoi</span><div style="margin-top:6px">'+s.rat+'</div></div></div>';
+}
+var scnAnswered = { pico:{}, hypo:{}, rct:{} };
+var picoScored = {}; // clés déjà créditées (persistant à travers les réinitialisations)
+function bindScn(ns, arr, after){
+  document.querySelectorAll('.opt[data-ns="'+ns+'"]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var i=+btn.getAttribute('data-i'), j=+btn.getAttribute('data-j');
+      if(scnAnswered[ns][i]) return;
+      scnAnswered[ns][i]=true;
+      var s=arr[i], correct=s.opts[j].ok;
+      document.querySelectorAll('.opt[data-ns="'+ns+'"][data-i="'+i+'"]').forEach(function(b,k){
+        b.disabled=true;
+        if(arr[i].opts[k].ok) b.classList.add('correct');
+        if(k===j && !correct) b.classList.add('wrong');
+      });
+      document.getElementById('rat_'+ns+'_'+i).classList.add('show');
+      var key=ns+':'+i;
+      if(correct && !picoScored[key]){ picoScored[key]=true; addScore(1); }
+      if(s.slot){ var sl=document.querySelector('.slot[data-slot="'+s.slot+'"]'); if(sl){ sl.textContent=s.fill; sl.classList.add('filled'); } }
+      after();
+    });
+  });
+}
+function picoAfter(){
+  var totalQ = PICO.length + HYPO.length + RCT.length;
+  var ans = Object.keys(scnAnswered.pico).length + Object.keys(scnAnswered.hypo).length + Object.keys(scnAnswered.rct).length;
+  if(ans>=totalQ && !state.done['pico']) markDone('pico');
+}
+function picoReset(){
+  scnAnswered = { pico:{}, hypo:{}, rct:{} };
+  ['P','I','C','O'].forEach(function(sl){
+    var el=document.querySelector('.slot[data-slot="'+sl+'"]');
+    if(el){ el.textContent='['+({P:'Population',I:'Intervention',C:'Comparateur',O:'Critère de jugement'}[sl])+']'; el.classList.remove('filled'); }
+  });
+  renderPico();
+}
+document.getElementById('picoResetBtn').addEventListener('click', picoReset);
+
+
+/* ===================== ÉTAPE 3 : PHASE I ===================== */
+var P1_DOSES = [1,2,4,8,16,32];
+// DLT déterministes par palier (sur 6) : 16 mg = premier palier ≥ 2 DLT ; DMT idéale = 8 mg
+var P1_DLT_N = {1:0, 2:0, 4:0, 8:1, 16:2, 32:4};
+// kaliémie moyenne (mmol/L) par palier — hyperkaliémie ≥ 5,5 ; sévère ≥ 6,0
+var P1_KAL = {1:4.2, 2:4.3, 4:4.5, 8:4.8, 16:5.6, 32:6.4};
+var P1_IDEAL_MTD = 8;
+var p1 = { idx:-1, results:{}, firstToxIdx:null, continuedPastTox:false, declaring:false, pick:null, done:false };
+
+function kalClass(v){ return v>=6.0 ? 'sev' : (v>=5.5 ? 'high' : 'norm'); }
+function dstatHTML(dlt, kal){
+  return '<b>'+dlt+'</b> / 6 DLT · <span class="kv '+kalClass(kal)+'">K⁺ '+kal.toFixed(1)+'</span>';
+}
+function renderLadder(){
+  document.getElementById('doseLadder').innerHTML = P1_DOSES.map(function(d,i){
+    var subs = '';
+    for(var k=0;k<6;k++) subs += '<div class="subj empty" id="subj_'+i+'_'+k+'">·</div>';
+    return '<div class="drow" id="drow_'+i+'" data-i="'+i+'">'
+      + '<div class="dl">'+d+' mg</div>'
+      + '<div class="subjects">'+subs+'</div>'
+      + '<div class="dstat" id="dstat_'+i+'">cohorte non administrée</div></div>';
+  }).join('');
+}
+function p1Reset(){
+  p1={ idx:-1, results:{}, firstToxIdx:null, continuedPastTox:false, declaring:false, pick:null, done:false };
+  renderLadder();
+  var v=document.getElementById('p1Verdict');
+  v.className='verdict neutral';
+  v.textContent='Administrez la première cohorte (1 mg) pour commencer.';
+  document.getElementById('p1NextBtn').disabled=false;
+  document.getElementById('p1NextBtn').textContent='▶ Administrer la cohorte suivante';
+  document.getElementById('p1DeclareBtn').disabled=true;
+  document.getElementById('p1Picker').style.display='none';
+  document.getElementById('p1PickRow').innerHTML='';
+  document.getElementById('p1ConfirmBtn').disabled=true;
+  var done=document.getElementById('p1Done'); done.style.display='none'; done.innerHTML='';
+}
+function p1Next(){
+  if(p1.done || p1.declaring) return;
+  if(p1.idx>=P1_DOSES.length-1) return;
+  p1.idx++;
+  var i=p1.idx, dose=P1_DOSES[i], dlt=P1_DLT_N[dose], kal=P1_KAL[dose];
+  if(p1.firstToxIdx!==null && i>p1.firstToxIdx) p1.continuedPastTox=true; // poursuite au-delà du 1er palier toxique
+  document.querySelectorAll('.drow').forEach(function(r){ r.classList.remove('current'); });
+  var row=document.getElementById('drow_'+i); row.classList.add('tested','current');
+  for(var k=0;k<6;k++){
+    var hit = k<dlt;
+    var cell=document.getElementById('subj_'+i+'_'+k);
+    cell.classList.remove('empty'); cell.classList.add('subj');
+    if(hit){ cell.classList.add('dlt'); cell.textContent='✗'; } else { cell.textContent='✓'; }
+  }
+  p1.results[i]=dlt;
+  document.getElementById('dstat_'+i).innerHTML = dstatHTML(dlt, kal);
+  document.getElementById('p1DeclareBtn').disabled=false;
+  var v=document.getElementById('p1Verdict');
+  var hyperTxt = kal>=6.0 ? ' Kaliémie <b>sévèrement élevée</b> ('+kal.toFixed(1)+' mmol/L).' : (kal>=5.5 ? ' Kaliémie <b>élevée</b> ('+kal.toFixed(1)+' mmol/L).' : '');
+  var last = i>=P1_DOSES.length-1;
+  if(dlt>=2){
+    row.classList.add('toxic'); row.classList.remove('current');
+    if(p1.firstToxIdx===null) p1.firstToxIdx=i;
+    var prev = i>0 ? P1_DOSES[i-1] : null;
+    v.className='verdict bad';
+    v.innerHTML='<span class="tag bad">Signal de toxicité</span> '+dose+' mg : '+dlt+'/6 DLT (≥ 2) — règle d\'arrêt atteinte.'+hyperTxt+' La DMT est le <b>palier précédent ('+(prev?prev+' mg':'—')+')</b>. <b>Arrêtez et déclarez la DMT</b> : poursuivre exposerait à un danger inutile.';
+    if(last){ document.getElementById('p1NextBtn').disabled=true; }
+  } else if(last){
+    document.getElementById('p1NextBtn').disabled=true;
+    v.className='verdict info';
+    v.innerHTML=dose+' mg : '+dlt+'/6 DLT.'+hyperTxt+' Dernier palier prévu atteint — arrêtez et déclarez la DMT.';
+  } else {
+    v.className='verdict info';
+    v.innerHTML=dose+' mg : '+dlt+'/6 DLT — bien toléré.'+hyperTxt+' Vous pouvez <b>escalader</b> au palier suivant, ou <b>arrêter et déclarer la DMT</b> si vous estimez tenir la dose recherchée.';
+  }
+}
+function p1Declare(){
+  if(p1.done || p1.idx<0) return;
+  p1.declaring=true;
+  document.getElementById('p1NextBtn').disabled=true;
+  document.getElementById('p1DeclareBtn').disabled=true;
+  var row=document.getElementById('p1PickRow'); row.innerHTML='';
+  for(var i=0;i<=p1.idx;i++){
+    (function(i){
+      var b=document.createElement('button');
+      b.className='pickdose'; b.textContent=P1_DOSES[i]+' mg'; b.setAttribute('data-i',i);
+      b.addEventListener('click', function(){
+        p1.pick=i;
+        document.querySelectorAll('#p1PickRow .pickdose').forEach(function(x){ x.classList.remove('sel'); });
+        b.classList.add('sel');
+        document.getElementById('p1ConfirmBtn').disabled=false;
+      });
+      row.appendChild(b);
+    })(i);
+  }
+  document.getElementById('p1Picker').style.display='block';
+  var v=document.getElementById('p1Verdict');
+  v.className='verdict neutral';
+  v.innerHTML='Cochez le palier que vous retenez comme <b>dose maximale tolérée</b>, puis confirmez.';
+  document.getElementById('p1Picker').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function p1Confirm(){
+  if(p1.done || p1.pick===null) return;
+  p1.done=true;
+  document.getElementById('p1ConfirmBtn').disabled=true;
+  document.querySelectorAll('#p1PickRow .pickdose').forEach(function(x){ x.disabled=true; });
+  var declaredIdx=p1.pick, declaredDose=P1_DOSES[declaredIdx];
+  document.querySelectorAll('.drow').forEach(function(r){ r.classList.remove('current','mtd'); });
+  document.getElementById('drow_'+declaredIdx).classList.add('mtd');
+  var flag='';
+  if(p1.continuedPastTox){
+    var toxDose = p1.firstToxIdx!==null ? P1_DOSES[p1.firstToxIdx] : null;
+    flag='<div style="margin-top:8px;padding-top:8px;border-top:1px dashed rgba(0,0,0,.18)"><span class="tag bad">Sécurité</span> Vous avez <b>poursuivi l\'escalade après le premier événement indésirable majeur</b>'+(toxDose?' ('+toxDose+' mg : ≥ 2 DLT et hyperkaliémie)':'')+'. En pratique, on arrête dès ce signal : chaque palier supplémentaire expose des volontaires à un risque évitable.</div>';
+  }
+  var d=document.getElementById('p1Done'), pts=0, cls, head;
+  if(declaredDose===P1_IDEAL_MTD && !p1.continuedPastTox){
+    cls='verdict good'; pts=3;
+    head='<span class="tag good">Bien joué</span> DMT = <b>8 mg</b> : le palier le plus élevé resté sûr, juste avant la bascule toxique à 16 mg. Doses retenues pour la phase II : <b>4 et 8 mg</b>.';
+  } else if(declaredDose===P1_IDEAL_MTD){
+    cls='verdict info'; pts=1;
+    head='<span class="tag neutral">DMT correcte, mais…</span> Vous retenez bien <b>8 mg</b> comme DMT — le bon palier.';
+  } else if(declaredDose<P1_IDEAL_MTD){
+    cls='verdict info'; pts=1;
+    head='<span class="tag neutral">Arrêt prématuré</span> DMT déclarée = <b>'+declaredDose+' mg</b>. La molécule était encore bien tolérée à ce palier (K⁺ '+P1_KAL[declaredDose].toFixed(1)+') : vous laissez peut-être de l\'efficacité de côté. La DMT « idéale » était 8 mg.';
+  } else {
+    cls='verdict bad'; pts=0;
+    head='<span class="tag bad">Dose trop élevée</span> DMT déclarée = <b>'+declaredDose+' mg</b>, au-delà du palier sûr (K⁺ '+P1_KAL[declaredDose].toFixed(1)+', ≥ 2 DLT). À cette dose, la toxicité dose-limitante devient inacceptable. La DMT recherchée était <b>8 mg</b>.';
+  }
+  d.className=cls; d.style.display='block'; d.innerHTML=head+flag;
+  document.getElementById('p1Verdict').className='verdict neutral';
+  document.getElementById('p1Verdict').innerHTML='Décision enregistrée. Vous pouvez recommencer pour tester une autre stratégie.';
+  if(!state.done['p1']){ if(pts>0) addScore(pts); markDone('p1'); }
+}
+document.getElementById('p1NextBtn').addEventListener('click', p1Next);
+document.getElementById('p1DeclareBtn').addEventListener('click', p1Declare);
+document.getElementById('p1ConfirmBtn').addEventListener('click', p1Confirm);
+document.getElementById('p1ResetBtn').addEventListener('click', p1Reset);
+
+/* ===================== ÉTAPE 4 : PHASE II ===================== */
+var P2 = [
+  { dose:'Placebo', eff:0,  k:1 },
+  { dose:'2 mg',    eff:4,  k:2 },
+  { dose:'4 mg',    eff:7,  k:3 },
+  { dose:'8 mg',    eff:9,  k:6 },
+  { dose:'16 mg',   eff:10, k:14 }
+];
+var P2_MAXEFF = 12;
+var p2 = { run:false, selected:null };
+function renderDR(){
+  document.getElementById('drBars').innerHTML = P2.map(function(b,i){
+    return '<div class="drbar" data-i="'+i+'" id="drbar_'+i+'">'
+      + '<div class="stack"><div class="eff" id="eff_'+i+'"></div></div>'
+      + '<div class="kdot" id="kdot_'+i+'"></div>'
+      + '<div class="dn">'+b.dose+'</div></div>';
+  }).join('');
+  document.querySelectorAll('.drbar').forEach(function(el){
+    el.addEventListener('click', function(){ if(p2.run) p2Select(+el.getAttribute('data-i')); });
+  });
+}
+function p2Run(){
+  p2.run=true;
+  P2.forEach(function(b,i){
+    var eff = b.eff + (Math.random()*1.2-0.6); // léger bruit
+    if(eff<0) eff=0;
+    var h = Math.round(eff / P2_MAXEFF * 100);
+    var el=document.getElementById('eff_'+i);
+    el.style.height=h+'%';
+    el.textContent = b.eff>0 ? ('−'+b.eff) : '0';
+    document.getElementById('kdot_'+i).textContent = 'K⁺ '+b.k+'%';
+  });
+  document.getElementById('p2Verdict').className='verdict info';
+  document.getElementById('p2Verdict').innerHTML='Courbe révélée. L\'efficacité <b>plafonne</b> vers 8–16 mg, mais l\'hyperkaliémie grimpe vite au-delà. Désignez maintenant la dose de phase III.';
+  document.getElementById('p2Hint').style.display='block';
+}
+function p2Select(i){
+  p2.selected=i;
+  document.querySelectorAll('.drbar').forEach(function(el){ el.classList.remove('sel'); });
+  document.getElementById('drbar_'+i).classList.add('sel');
+  var v=document.getElementById('p2Verdict'), b=P2[i];
+  if(b.dose==='8 mg'){
+    v.className='verdict good';
+    v.innerHTML='<span class="tag good">Choix optimal</span> <b>8 mg</b> : −9 mmHg, soit l\'essentiel de l\'effet maximal, pour une hyperkaliémie encore acceptable (~6 %). Meilleur rapport bénéfice/risque.';
+    if(!state.done['p2']){ addScore(2); markDone('p2'); }
+  } else if(b.dose==='4 mg'){
+    v.className='verdict info';
+    v.innerHTML='<span class="tag neutral">Défendable</span> <b>4 mg</b> : très sûr (~3 % d\'hyperkaliémie) mais −7 mmHg seulement. On sacrifie ~2 mmHg d\'efficacité. Souvent retenu comme dose basse d\'un schéma à deux doses.';
+    if(!state.done['p2']){ addScore(1); markDone('p2'); }
+  } else if(b.dose==='16 mg'){
+    v.className='verdict bad';
+    v.innerHTML='<span class="tag bad">Risque inutile</span> <b>16 mg</b> : +1 mmHg seulement vs 8 mg, mais l\'hyperkaliémie double (~14 %). On ne « paie » pas un gain marginal par un risque majoré.';
+    if(!state.done['p2']){ markDone('p2'); }
+  } else {
+    v.className='verdict bad';
+    v.innerHTML='<span class="tag bad">Sous-dosé</span> <b>'+b.dose+'</b> : effet trop faible ('+(b.eff>0?'−'+b.eff+' mmHg':'placebo')+'). On porterait en phase III une dose qui risque de ne pas démontrer le bénéfice.';
+    if(!state.done['p2']){ markDone('p2'); }
+  }
+}
+function p2Reset(){
+  p2={ run:false, selected:null };
+  renderDR();
+  document.getElementById('p2Verdict').className='verdict neutral';
+  document.getElementById('p2Verdict').textContent='Lancez l\'essai de phase II pour révéler la courbe.';
+  document.getElementById('p2Hint').style.display='none';
+}
+document.getElementById('p2RunBtn').addEventListener('click', p2Run);
+document.getElementById('p2ResetBtn').addEventListener('click', p2Reset);
+
+/* ===================== ÉTAPE 5 : PHASE III (sample size + run) ===================== */
+var Z_ALPHA = { '0.05':1.95996, '0.01':2.57583 };
+var Z_BETA  = { '0.80':0.84162, '0.90':1.28155, '0.95':1.64485 };
+var RECRUIT_CEIL = 320; // capacité multicentrique réaliste
+var ss = { delta:5, sigma:12, power:'0.90', alpha:'0.05', drop:15 };
+function ssCompute(){
+  var za=Z_ALPHA[ss.alpha], zb=Z_BETA[ss.power];
+  var nPer = 2 * Math.pow(za+zb,2) * Math.pow(ss.sigma,2) / Math.pow(ss.delta,2);
+  nPer = Math.ceil(nPer);
+  var nInfl = Math.ceil(nPer / (1 - ss.drop/100));
+  var total = nInfl*2;
+  return { nPer:nPer, nInfl:nInfl, total:total };
+}
+function ssRender(){
+  document.getElementById('ssDeltaV').textContent = ss.delta;
+  document.getElementById('ssSigmaV').textContent = ss.sigma;
+  document.getElementById('ssDropV').textContent = ss.drop;
+  var r=ssCompute();
+  document.getElementById('ssTotal').textContent = r.total;
+  document.getElementById('ssPerArm').textContent = r.nInfl+' par bras (×2), perdus de vue inclus';
+  // feasibility bar relative to ceiling (cap visual at 2× ceiling)
+  var pct = Math.min(100, r.total/(RECRUIT_CEIL*2)*100);
+  var bar=document.getElementById('ssFeasBar'); bar.style.width=pct+'%';
+  document.getElementById('ssCeil').style.left = (100*RECRUIT_CEIL/(RECRUIT_CEIL*2))+'%';
+  var feasible = r.total<=RECRUIT_CEIL;
+  var powerful = parseFloat(ss.power)>=0.80;
+  bar.style.background = feasible? 'var(--good)' : (r.total<=RECRUIT_CEIL*1.5?'var(--sun)':'var(--bad)');
+  var msg, ok=false;
+  if(feasible && powerful){ msg='<span class="tag good">Réalisable</span> '+r.total+' patients ≤ capacité (~'+RECRUIT_CEIL+'), puissance '+(parseFloat(ss.power)*100)+' %.'; ok=true; }
+  else if(!feasible){ msg='<span class="tag bad">Trop grand</span> '+r.total+' patients dépasse la capacité de recrutement (~'+RECRUIT_CEIL+'). Augmentez Δ détectable, réduisez σ, la puissance, ou les perdus de vue.'; }
+  else { msg='<span class="tag bad">Sous-puissant</span> puissance insuffisante.'; }
+  document.getElementById('ssFeas').innerHTML=msg;
+  document.getElementById('ssLockBtn').disabled = !ok;
+}
+document.getElementById('ssDelta').addEventListener('input', function(){ ss.delta=parseFloat(this.value); ssRender(); });
+document.getElementById('ssSigma').addEventListener('input', function(){ ss.sigma=parseFloat(this.value); ssRender(); });
+document.getElementById('ssDrop').addEventListener('input', function(){ ss.drop=parseInt(this.value,10); ssRender(); });
+function segBind(groupId, key){
+  document.querySelectorAll('#'+groupId+' button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('#'+groupId+' button').forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on'); ss[key]=b.getAttribute('data-v'); ssRender();
+    });
+  });
+}
+segBind('ssPower','power'); segBind('ssAlpha','alpha');
+document.getElementById('ssLockBtn').addEventListener('click', function(){
+  if(state.ssLocked) return;
+  state.ssLocked=true;
+  this.disabled=true; this.textContent='✓ Protocole validé';
+  document.getElementById('p3RunCard').style.display='block';
+  if(!state.done['p3']){ addScore(2); }
+  document.getElementById('p3RunCard').scrollIntoView({behavior:'smooth',block:'start'});
+});
+document.getElementById('p3RunBtn').addEventListener('click', function(){
+  if(state.p3Run) return;
+  state.p3Run=true;
+  this.disabled=true; this.textContent='Essai terminé';
+  var ro=document.getElementById('p3Readouts'); ro.style.display='grid';
+  // animate count-up
+  animateVal('p3RateN', 0, -14.5, ' mmHg', 900);
+  animateVal('p3RateR', 0, -5.5, ' mmHg', 900);
+  setTimeout(function(){
+    var v=document.getElementById('p3Verdict'); v.style.display='block'; v.className='verdict good';
+    v.innerHTML='<span class="tag good">Résultat principal</span> Différence néravadine − placebo sur la PAS à S12 = <b>−9,0 mmHg</b>, IC à 95 % <b>[−12 ; −6]</b>, p &lt; 0,001. L\'essai pivot atteint son objectif. Passez à l\'étape 6 pour lire ce résultat.';
+    if(!state.done['p3']) markDone('p3');
+  }, 950);
+});
+function p3Reset(){
+  state.ssLocked=false; state.p3Run=false;
+  ss={ delta:5, sigma:12, power:'0.90', alpha:'0.05', drop:15 };
+  document.getElementById('ssDelta').value=5;
+  document.getElementById('ssSigma').value=12;
+  document.getElementById('ssDrop').value=15;
+  document.querySelectorAll('#ssPower button').forEach(function(x){ x.classList.toggle('on', x.getAttribute('data-v')==='0.90'); });
+  document.querySelectorAll('#ssAlpha button').forEach(function(x){ x.classList.toggle('on', x.getAttribute('data-v')==='0.05'); });
+  ssRender();
+  var lb=document.getElementById('ssLockBtn'); lb.textContent='✓ Valider ce protocole';
+  document.getElementById('p3RunCard').style.display='none';
+  var rb=document.getElementById('p3RunBtn'); rb.disabled=false; rb.textContent='▶ Lancer l\'essai pivot';
+  document.getElementById('p3Readouts').style.display='none';
+  document.getElementById('p3Verdict').style.display='none';
+}
+document.getElementById('p3ResetBtn').addEventListener('click', p3Reset);
+function animateVal(id, from, to, suffix, dur){
+  var el=document.getElementById(id), t0=null;
+  function step(ts){ if(!t0)t0=ts; var k=Math.min(1,(ts-t0)/dur); var val=from+(to-from)*k;
+    el.textContent=(val>0?'+':'')+val.toFixed(1)+suffix; if(k<1) requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+}
+
+/* ===================== ÉTAPE 6 : IC ===================== */
+var CI_SCN = [
+  { id:'A', label:'Essai pivot (résultat réel)', sub:'−9 [−12 ; −6]', point:-9, lo:-12, hi:-6 },
+  { id:'B', label:'Effet réel mais modeste', sub:'−3 [−5 ; −1]', point:-3, lo:-5, hi:-1 },
+  { id:'C', label:'Non significatif', sub:'−4 [−9 ; +1]', point:-4, lo:-9, hi:1 },
+  { id:'D', label:'Imprécis (petit effectif)', sub:'−9 [−19 ; +1]', point:-9, lo:-19, hi:1 }
+];
+var CI_MIN=-20, CI_MAX=3, MCID=-5;
+var ciAnswered={};
+function ciXpct(v){ return (v-CI_MIN)/(CI_MAX-CI_MIN)*100; }
+function renderCiScn(){
+  document.getElementById('ciScn').innerHTML = CI_SCN.map(function(s){
+    return '<button class="cibtn" data-id="'+s.id+'">'+s.label+'<small>ΔPAS '+s.sub+'</small></button>';
+  }).join('');
+  document.querySelectorAll('.cibtn').forEach(function(b){ b.addEventListener('click', function(){ ciShow(b.getAttribute('data-id')); }); });
+  // ticks
+  var ticks=[-20,-15,-10,-5,0]; 
+  document.getElementById('ciTicks').innerHTML = ticks.map(function(t){
+    return '<span style="left:'+ciXpct(t)+'%">'+t+'</span>';
+  }).join('');
+  document.getElementById('ciZero').style.left = ciXpct(0)+'%';
+  document.getElementById('ciMcid').style.left = ciXpct(MCID)+'%';
+}
+function ciShow(id){
+  var s=CI_SCN.filter(function(x){return x.id===id;})[0];
+  document.querySelectorAll('.cibtn').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-id')===id); });
+  var loP=ciXpct(s.lo), hiP=ciXpct(s.hi);
+  var bar=document.getElementById('ciBar');
+  bar.style.left=loP+'%'; bar.style.width=(hiP-loP)+'%';
+  document.getElementById('ciPoint').style.left=ciXpct(s.point)+'%';
+  var sig = s.hi<0; // IC entièrement < 0
+  var rel = s.hi<=MCID; // borne sup atteint le seuil de pertinence
+  setCiv('civSig','civSigV', sig);
+  setCiv('civRel','civRelV', rel);
+  var v=document.getElementById('ciVerdict');
+  if(sig && rel){ v.className='verdict good'; v.innerHTML='<b>Significatif et pertinent.</b> L\'IC est entièrement à gauche de 0 (effet certain) et dépasse le seuil de 5 mmHg (effet qui compte). C\'est le profil recherché — celui de notre essai pivot.'; }
+  else if(sig && !rel){ v.className='verdict info'; v.innerHTML='<b>Significatif, mais modeste.</b> L\'IC évite 0 (effet réel), mais ne dépasse pas franchement 5 mmHg : statistiquement vrai n\'est pas forcément cliniquement utile. La taille de l\'effet compte autant que sa significativité.'; }
+  else { v.className='verdict bad'; v.innerHTML='<b>Non concluant.</b> L\'IC traverse 0 : on ne peut pas exclure l\'absence d\'effet. '+(id==='D'?'Ici l\'estimation ponctuelle est forte (−9) mais l\'IC est très large : c\'est un manque de <b>puissance</b> — il aurait fallu plus de patients (étape 5).':'Le résultat n\'est pas statistiquement significatif.'); }
+  if(!ciAnswered[id]){ ciAnswered[id]=true; if(Object.keys(ciAnswered).length===CI_SCN.length && !state.done['ci']){ addScore(2); markDone('ci'); } }
+}
+function setCiv(boxId, valId, yes){
+  var box=document.getElementById(boxId), val=document.getElementById(valId);
+  box.classList.remove('yes','no'); box.classList.add(yes?'yes':'no');
+  val.textContent = yes?'Oui':'Non';
+}
+function ciReset(){
+  ciAnswered={};
+  renderCiScn();
+  ciShow('A');
+}
+document.getElementById('ciResetBtn').addEventListener('click', ciReset);
+
+/* ===================== ÉTAPE 7 : PHARMACOVIGILANCE ===================== */
+var PV_INCID = 1/5000;
+var PV_STAGES = [
+  { e:'Essai pivot', n:300 },
+  { e:'1re année post-AMM', n:5000 },
+  { e:'Usage élargi', n:50000 },
+  { e:'Vie réelle', n:500000 }
+];
+var pv = { idx:-1 };
+function renderPvStages(){
+  document.getElementById('pvStages').innerHTML = PV_STAGES.map(function(s,i){
+    return '<div class="pvstage" id="pvstage_'+i+'"><div class="pe">'+s.e+'</div><div class="pn">'+s.n.toLocaleString('fr-FR')+'</div><div class="pc" id="pvcases_'+i+'">— cas</div></div>';
+  }).join('');
+}
+function pvReset(){
+  pv={ idx:-1 };
+  renderPvStages();
+  document.getElementById('pvDots').innerHTML='';
+  document.getElementById('pvCaseCount').textContent='— sur l\'exposition cumulée';
+  document.getElementById('pvVerdict').className='verdict neutral';
+  document.getElementById('pvVerdict').textContent='Au stade de l\'essai pivot, l\'effet rare est presque toujours invisible. Étendez l\'exposition.';
+  document.getElementById('pvNextBtn').disabled=false;
+  document.getElementById('pvNextBtn').textContent='▶ Étendre l\'exposition';
+}
+function pvNext(){
+  if(pv.idx>=PV_STAGES.length-1) return;
+  pv.idx++;
+  var i=pv.idx, s=PV_STAGES[i];
+  document.querySelectorAll('.pvstage').forEach(function(el){ el.classList.remove('on'); });
+  document.getElementById('pvstage_'+i).classList.add('on');
+  // cas observés ~ Poisson(N*p), approx par tirages
+  var expected = s.n*PV_INCID;
+  var cases=0; 
+  // simulate using expected with mild randomness
+  var base=Math.floor(expected);
+  var frac=expected-base;
+  cases = base + (Math.random()<frac?1:0);
+  if(expected>=10){ // resserrer autour de l'attendu pour les grands N
+    cases = Math.round(expected + (Math.random()*2-1)*Math.sqrt(expected));
+  }
+  if(cases<0) cases=0;
+  document.getElementById('pvcases_'+i).textContent = cases+' cas';
+  // dots field: show up to ~ a representative grid; scale cases display
+  var maxDots = 120;
+  var shownCases = Math.min(cases, maxDots);
+  var html='';
+  for(var k=0;k<maxDots;k++){ html += '<div class="pvdot'+(k<shownCases?' case':'')+'"></div>'; }
+  document.getElementById('pvDots').innerHTML=html;
+  document.getElementById('pvCaseCount').textContent = cases+' cas sur '+s.n.toLocaleString('fr-FR')+' exposés';
+  var v=document.getElementById('pvVerdict');
+  if(cases===0){
+    v.className='verdict neutral';
+    v.innerHTML='Sur '+s.n.toLocaleString('fr-FR')+' exposés, <b>0 cas</b> observé : l\'effet (1/5 000) reste sous le radar. Continuez.';
+  } else if(cases<3){
+    v.className='verdict info';
+    v.innerHTML='Sur '+s.n.toLocaleString('fr-FR')+' exposés, <b>'+cases+' cas</b> : un premier signal, encore fragile. Un seul cas ne fait pas une alerte.';
+  } else {
+    v.className='verdict bad';
+    v.innerHTML='<span class="tag bad">Signal détecté</span> Sur '+s.n.toLocaleString('fr-FR')+' exposés, <b>'+cases+' cas</b> d\'angio-œdème : l\'événement rare devient visible. Sans la phase IV, il serait passé inaperçu — l\'essai pivot ne pouvait pas le voir.';
+    if(!state.done['pv']){ addScore(1); markDone('pv'); }
+  }
+  if(pv.idx>=PV_STAGES.length-1){ document.getElementById('pvNextBtn').disabled=true; document.getElementById('pvNextBtn').textContent='Exposition maximale atteinte'; }
+}
+document.getElementById('pvNextBtn').addEventListener('click', pvNext);
+document.getElementById('pvResetBtn').addEventListener('click', pvReset);
+
+/* ===================== SYNTHÈSE : FUNNEL ===================== */
+var FUNNEL = [
+  { l:'Molécules criblées', n:'~10 000', w:100, c:'var(--cloud)' },
+  { l:'Candidats précliniques', n:'~250', w:80, c:'#6f7a86' },
+  { l:'Entrée en phase I', n:'~10', w:62, c:'var(--info)' },
+  { l:'Phase II', n:'~5', w:46, c:'#3f7fa3' },
+  { l:'Phase III', n:'~1–2', w:32, c:'var(--armR)' },
+  { l:'Médicament approuvé (AMM)', n:'1', w:20, c:'var(--good)' }
+];
+function renderFunnel(){
+  document.getElementById('funnel').innerHTML = FUNNEL.map(function(f){
+    return '<div class="frung" style="width:'+f.w+'%;background:'+f.c+'"><span class="fl">'+f.l+'</span><span class="fn">'+f.n+'</span></div>';
+  }).join('');
+}
+
+/* ===================== INIT ===================== */
+renderStudies();
+renderPico();
+p1Reset();
+renderDR();
+ssRender();
+renderCiScn(); ciShow('A');
+pvReset();
+renderFunnel();
+</script>
+</body>
+</html>
