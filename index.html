@@ -331,6 +331,88 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .steptile h3{font-family:var(--font-display);font-size:18px;margin:6px 0 6px;}
 .steptile p{font-size:14.5px;line-height:1.5;color:var(--ink-soft);margin:0;}
 
+/* ---------- barre « partie suivante / précédente » (bas de chaque partie) ---------- */
+.panelnav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  margin-top:22px;padding-top:16px;border-top:1px solid var(--line);}
+.panelnav .pn-left,.panelnav .pn-right{display:flex;gap:10px;flex-wrap:wrap;}
+.panelnav .btn{white-space:nowrap;}
+.btn.nav-ready,.btn.nav-ready:hover{box-shadow:0 0 0 4px var(--brand-soft),var(--shadow);}
+
+/* ---------- guide « comment avancer » (accueil) ---------- */
+.guideloop{display:flex;align-items:stretch;gap:6px;flex-wrap:wrap;margin-top:6px;}
+.gstep{flex:1;min-width:132px;border:1px solid var(--line);border-radius:12px;background:var(--panel-2);
+  padding:12px 12px 13px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:7px;}
+.gstep .gnum{font-family:var(--font-mono);font-weight:700;font-size:12px;color:var(--brand);
+  border:1.5px solid var(--brand);border-radius:8px;min-width:26px;height:26px;display:grid;place-items:center;}
+.gstep .gic{font-size:21px;line-height:1;color:var(--brand);}
+.gstep .gt{font-size:13px;line-height:1.4;color:var(--ink);}
+.garrow{display:flex;align-items:center;color:var(--brand);font-weight:700;font-size:20px;flex:none;}
+.guidelegend{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px;}
+.glrow{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;
+  background:var(--panel);padding:10px 12px;}
+.glrow .glsample{flex:none;display:flex;align-items:center;}
+.glrow .glcap{font-size:13px;line-height:1.4;color:var(--ink-soft);}
+.glrow .glcap b{color:var(--ink);font-weight:600;}
+.glsample .navbtn{padding:6px 9px;font-size:12px;box-shadow:none;cursor:default;min-width:0;}
+.glsample .navbtn:hover{transform:none;border-color:var(--line);}
+.glsample .navbtn .n{min-width:24px;height:24px;font-size:11px;}
+.glsample .navbtn .t small{display:none;}
+.glsample .scorebox{padding:6px 11px;min-width:0;box-shadow:none;text-align:center;}
+.glsample .scorebox .val{font-size:19px;}
+.glsample .btn{padding:6px 11px;font-size:12.5px;cursor:default;box-shadow:none;}
+.glsample .btn:hover{transform:none;opacity:1;}
+
+/* ---------- guide « comment jouer » propre à chaque partie ---------- */
+.howto{border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:12px;
+  background:var(--panel-2);padding:11px 14px 12px;margin:14px 0 4px;}
+.howto .hh{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--brand);font-weight:700;margin-bottom:9px;}
+.howto .hsteps{display:flex;gap:9px;flex-wrap:wrap;}
+.howto .hstep{display:flex;align-items:flex-start;gap:8px;flex:1;min-width:190px;
+  font-size:13px;line-height:1.4;color:var(--ink);}
+.howto .hn{font-family:var(--font-mono);font-weight:700;font-size:11px;color:#fff;background:var(--brand);
+  min-width:22px;height:22px;border-radius:7px;display:grid;place-items:center;flex:none;margin-top:1px;}
+.howto .hbtn{font-family:var(--font-body);font-weight:600;font-size:11px;border-radius:6px;padding:1px 7px;
+  border:1px solid var(--ink);background:var(--ink);color:#fff;white-space:nowrap;display:inline-block;}
+.howto .hbtn.brand{background:var(--brand);border-color:var(--brand);}
+.howto .hbtn.ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+.howto .hbtn.info{background:var(--info);border-color:var(--info);}
+
+/* ---------- bannière « donnez votre avis » (haut de la synthèse) ---------- */
+.avisbanner{position:relative;overflow:hidden;border-radius:18px;margin-bottom:18px;
+  background:var(--brand);color:var(--panel);box-shadow:var(--shadow);padding:26px 24px 24px;text-align:center;
+  background-image:
+    radial-gradient(520px 220px at 12% -25%, rgba(255,255,255,.20), transparent 60%),
+    radial-gradient(460px 260px at 110% 125%, rgba(255,255,255,.13), transparent 62%),
+    radial-gradient(rgba(255,255,255,.06) 1.1px, transparent 1.1px);
+  background-size:auto,auto,20px 20px;}
+.avisbanner .avis-ill{width:134px;height:auto;display:block;margin:0 auto 8px;}
+.avisbanner .avis-k{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:700;opacity:.85;margin:0 0 6px;}
+.avisbanner h2{font-family:var(--font-display);font-weight:700;font-size:clamp(21px,3vw,30px);
+  line-height:1.12;margin:0 0 8px;color:var(--panel);letter-spacing:normal;}
+.avisbanner .avis-stars{display:flex;justify-content:center;gap:6px;margin:2px 0 10px;}
+.avisbanner .avis-stars svg{width:24px;height:24px;display:block;}
+.avisbanner .avis-stars .s-star{fill:var(--sun);}
+.avisbanner .avis-sub{font-size:15.5px;opacity:.94;margin:0 0 16px;}
+.avisbanner .avis-cta{display:inline-flex;align-items:center;gap:9px;background:var(--panel);color:var(--brand);
+  border-color:var(--panel);font-size:16px;padding:13px 26px;border-radius:12px;text-decoration:none;
+  box-shadow:0 2px 12px rgba(20,30,25,.20);}
+.avisbanner .avis-cta:hover{color:var(--brand);}
+/* pièces de l'illustration SVG — uniquement des variables de marque */
+.avisbanner .s-shadow{fill:rgba(20,30,25,.18);}
+.avisbanner .s-paper{fill:var(--panel);}
+.avisbanner .s-hd{fill:var(--brand);}
+.avisbanner .s-ln{fill:var(--brand-soft);}
+.avisbanner .s-badge{fill:var(--armN);}
+.avisbanner .s-check{stroke:var(--panel);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none;}
+.avisbanner .s-pillA{fill:var(--panel);}
+.avisbanner .s-pillB{fill:var(--brand-soft);}
+.avisbanner .s-pillD{stroke:var(--brand);stroke-width:2;}
+.avisbanner .s-spark{fill:var(--sun);}
+
+@media (max-width:560px){ .avisbanner{padding:22px 16px 20px;} .avisbanner .avis-ill{width:110px;} .avisbanner .avis-stars svg{width:21px;height:21px;} }
+
 @media (max-width:880px){
   .shell{grid-template-columns:1fr;}
   .nav{position:static;flex-direction:row;overflow-x:auto;padding-bottom:4px;}
@@ -340,6 +422,10 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   .pvstages{grid-template-columns:1fr 1fr;}
   .drow{grid-template-columns:60px 1fr;}
   .drow .dstat{grid-column:1/-1;text-align:left;}
+}
+@media (max-width:560px){
+  .garrow{transform:rotate(90deg);}
+  .guidelegend{grid-template-columns:1fr;}
 }
 @media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important;} }
 </style>
@@ -431,6 +517,41 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="verdict info" style="margin-top:16px"><span class="tag info">Pédagogique</span> KZ-117 / néravadine est une molécule <b>fictive</b>, inventée pour cet atelier. Les chiffres sont vraisemblables mais ne décrivent aucun produit réel.</div>
         </div>
 
+        <div class="card" id="guide">
+          <p class="kicker">Mode d'emploi</p>
+          <h2 class="title">Comment avancer</h2>
+          <p class="lead">Chaque partie suit la même boucle. Répétez-la jusqu'à la synthèse.</p>
+          <div class="guideloop">
+            <div class="gstep"><span class="gnum">1</span><span class="gic" aria-hidden="true">❏</span><span class="gt">Lire la carte de la partie</span></div>
+            <div class="garrow" aria-hidden="true">→</div>
+            <div class="gstep"><span class="gnum">2</span><span class="gic" aria-hidden="true">✎</span><span class="gt">Faire le mini-jeu (valider ses réponses)</span></div>
+            <div class="garrow" aria-hidden="true">→</div>
+            <div class="gstep"><span class="gnum">3</span><span class="gic" aria-hidden="true">✦</span><span class="gt">Lire le « Rappel — à retenir »</span></div>
+            <div class="garrow" aria-hidden="true">→</div>
+            <div class="gstep"><span class="gnum">4</span><span class="gic" aria-hidden="true">→</span><span class="gt">Cliquer « Partie suivante → »</span></div>
+          </div>
+          <hr class="hr">
+          <p class="kicker" style="margin-bottom:10px">Repères de l'interface</p>
+          <div class="guidelegend">
+            <div class="glrow">
+              <div class="glsample"><button class="navbtn" type="button" tabindex="-1" aria-hidden="true"><span class="n">3</span><span class="t">Phase I<small>Dose</small></span></button></div>
+              <div class="glcap"><b>La liste des étapes</b>, à gauche — cliquez une étape pour y aller.</div>
+            </div>
+            <div class="glrow">
+              <div class="glsample"><div class="scorebox" aria-hidden="true"><div class="lab">Score</div><div class="val">3/20</div></div></div>
+              <div class="glcap"><b>Le score /20</b> — votre progression.</div>
+            </div>
+            <div class="glrow">
+              <div class="glsample"><button class="btn ghost" type="button" tabindex="-1" aria-hidden="true">↺ Réinitialiser</button></div>
+              <div class="glcap"><b>Le bouton « ↺ Réinitialiser »</b> — rejouer un mini-jeu.</div>
+            </div>
+            <div class="glrow">
+              <div class="glsample"><button class="btn brand" type="button" tabindex="-1" aria-hidden="true">Suivant →</button></div>
+              <div class="glcap"><b>Le bouton « Suivant → »</b> — passer à la partie suivante.</div>
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <p class="kicker">Le parcours — de l'idée à l'ordonnance</p>
           <h2 class="title">Chaque étape est un filtre</h2>
@@ -469,7 +590,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="verdict good" id="preclinDone" style="display:none"></div>
           <details class="anim">
             <summary>Rappel — à retenir</summary>
-            <div class="body">L'idée à retenir est celle du <b>verrou (gate)</b>&nbsp;: on ne passe jamais à l'Homme sans pharmacodynamie, ADME, toxicologie à doses répétées, génotoxicité, sécurité cardiaque (hERG/QT) et toxicologie de la reproduction. La majorité des molécules échouent <i>ici</i>, avant même la phase I.</div>
+            <div class="body">L'idée à retenir est celle du <b>verrou</b> — en anglais « gate », une barrière qu'il faut franchir avant d'aller plus loin&nbsp;: on ne passe jamais à l'Homme sans avoir documenté la pharmacodynamie (ce que le médicament fait à l'organisme), l'<b>ADME</b> — absorption, distribution, métabolisme, élimination, c'est-à-dire le devenir du médicament dans le corps —, la toxicologie à doses répétées, la génotoxicité (le risque d'abîmer l'ADN), la sécurité cardiaque — test <b>hERG</b> et mesure du <b>QT</b>, deux façons de vérifier que le médicament ne dérègle pas le rythme du cœur — et la toxicologie de la reproduction (effets sur la fertilité et l'embryon). La majorité des molécules échouent <i>ici</i>, avant même la phase I (la première administration à l'Homme).</div>
           </details>
         </div>
       </section>
@@ -522,7 +643,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="verdict good" id="p1Done" style="display:none;margin-top:14px"></div>
           <details class="anim">
             <summary>Rappel — à retenir</summary>
-            <div class="body">Règle simplifiée de type 3+3&nbsp;: tant qu'une cohorte montre &lt; 2 DLT sur 6, on peut escalader&nbsp;; dès qu'un palier atteint ≥ 2 DLT sur 6, il est <b>trop toxique</b> et la DMT est le <b>palier précédent</b>. Surveillez la <b>kaliémie</b> — principal effet indésirable à mesurer — qui grimpe avec la dose, et ne poursuivez pas l'escalade une fois le premier événement indésirable majeur observé.</div>
+            <div class="body">Règle simplifiée dite « 3+3 » — on avance par petits groupes et on décide au fur et à mesure&nbsp;: tant qu'une cohorte (un groupe de 6 volontaires) montre moins de 2 <b>DLT</b> — toxicité dose-limitante, c'est-à-dire un effet indésirable assez grave pour empêcher d'augmenter la dose — sur 6, on peut monter d'un palier. Dès qu'un palier atteint 2 <b>DLT</b> ou plus sur 6, il est <b>trop toxique</b>&nbsp;: la <b>DMT</b> — dose maximale tolérée, la plus forte dose encore acceptable — est alors le <b>palier précédent</b>. Surveillez la <b>kaliémie</b> (le taux de potassium dans le sang, noté K⁺) — principal effet indésirable à mesurer ici —, qui grimpe avec la dose&nbsp;: n'allez pas plus loin une fois le premier événement indésirable majeur observé.</div>
           </details>
         </div>
       </section>
@@ -543,7 +664,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <p class="note" id="p2Hint" style="margin-top:12px;display:none">Cliquez sur une barre pour choisir la dose de phase III.</p>
           <details class="anim">
             <summary>Rappel — à retenir</summary>
-            <div class="body">L'effet <b>plafonne</b>&nbsp;: 8 mg apporte presque toute l'efficacité (−9 mmHg) pour une hyperkaliémie encore acceptable (~6 %), tandis que 16 mg ne gagne qu'1 mmHg en doublant le risque (~14 %). À retenir&nbsp;: la « dose maximale tolérée » n'est pas la « dose optimale ». On choisit la dose au meilleur rapport bénéfice/risque.</div>
+            <div class="body">L'effet <b>plafonne</b> — au-delà d'une certaine dose, augmenter n'apporte presque plus de bénéfice&nbsp;: 8 mg apporte presque toute l'efficacité — une baisse de <b>PAS</b> (pression artérielle systolique, le chiffre « du haut ») de 9 mmHg (millimètres de mercure, l'unité de pression) — pour une <b>hyperkaliémie</b> (un excès de potassium dans le sang) encore acceptable (~6 %), tandis que 16 mg ne fait gagner qu'1 mmHg de plus… en doublant le risque (~14 %). À retenir&nbsp;: la <b>dose maximale tolérée</b> (la plus forte dose supportable) n'est pas la <b>dose optimale</b> (celle qui offre le meilleur compromis). On choisit la dose au meilleur rapport bénéfice/risque.</div>
           </details>
         </div>
       </section>
@@ -633,7 +754,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           <div class="btnrow"><button class="btn ghost" id="ciResetBtn">↺ Réinitialiser cette étape</button></div>
           <details class="anim">
             <summary>Rappel — à retenir</summary>
-            <div class="body">Les quatre cas résument les pièges classiques&nbsp;: (A) significatif <i>et</i> pertinent — le profil de notre pivot&nbsp;; (B) significatif mais effet trop petit pour compter — « significatif » n'est pas « pertinent »&nbsp;; (C) IC qui croise 0 — non significatif&nbsp;; (D) estimation forte mais IC très large qui croise 0 — <b>manque de puissance</b>, on ne peut pas conclure. Le cas (D) renvoie au dimensionnement de l'étape 5.</div>
+            <div class="body">Les quatre cas résument les pièges classiques de lecture d'un <b>IC</b> — intervalle de confiance, la fourchette dans laquelle se situe vraisemblablement le vrai effet&nbsp;: (A) significatif <i>et</i> pertinent — le profil de notre essai pivot&nbsp;; (B) significatif mais effet trop petit pour compter — « statistiquement significatif » (l'effet n'est probablement pas dû au hasard) n'est pas « cliniquement pertinent » (l'effet est assez grand pour aider le patient)&nbsp;; (C) l'IC croise 0 (la valeur « aucun effet ») — non significatif&nbsp;; (D) estimation forte mais IC très large qui croise 0 — <b>manque de puissance</b> (l'essai était trop petit pour trancher), on ne peut pas conclure. Le cas (D) renvoie au dimensionnement de l'étape 5.</div>
           </details>
         </div>
       </section>
@@ -656,13 +777,46 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
           </div>
           <details class="anim">
             <summary>Rappel — à retenir</summary>
-            <div class="body">Idée clé&nbsp;: pour <b>observer</b> en moyenne un seul cas d'un événement de fréquence 1/5 000, il faut ~5 000 exposés&nbsp;; pour le <b>détecter de façon fiable</b> (plusieurs cas), bien davantage. L'essai pivot, dimensionné pour l'efficacité, est structurellement aveugle aux effets rares — d'où la déclaration spontanée et les études post-AMM (phase IV).</div>
+            <div class="body">Idée clé&nbsp;: pour <b>observer</b> en moyenne un seul cas d'un événement de fréquence 1 pour 5 000, il faut environ 5 000 personnes exposées&nbsp;; pour le <b>détecter de façon fiable</b> (en voir plusieurs cas), il en faut bien davantage. L'essai pivot, dimensionné pour mesurer l'efficacité, est structurellement aveugle aux effets rares — d'où la <b>déclaration spontanée</b> (les soignants signalent les effets qu'ils observent) et les études menées après l'<b>AMM</b> — l'autorisation de mise sur le marché, le feu vert officiel pour commercialiser le médicament&nbsp;: c'est la phase IV (la surveillance en vie réelle).</div>
           </details>
         </div>
       </section>
 
       <!-- ========== SYNTHÈSE ========== -->
       <section class="panel" id="synth">
+
+        <!-- Appel à l'avis — lien externe (formulaire Google), ouvre un nouvel onglet -->
+        <div class="avisbanner">
+          <svg class="avis-ill" viewBox="0 0 150 120" role="img" aria-label="Un formulaire d'avis à remplir">
+            <ellipse class="s-shadow" cx="75" cy="106" rx="44" ry="7"/>
+            <rect class="s-paper" x="41" y="18" width="68" height="84" rx="11"/>
+            <rect class="s-hd" x="53" y="30" width="44" height="7" rx="3.5"/>
+            <rect class="s-ln" x="53" y="46" width="44" height="5" rx="2.5"/>
+            <rect class="s-ln" x="53" y="57" width="35" height="5" rx="2.5"/>
+            <rect class="s-ln" x="53" y="68" width="40" height="5" rx="2.5"/>
+            <circle class="s-badge" cx="99" cy="88" r="15"/>
+            <path class="s-check" d="M92 88 l5 5 l9 -11"/>
+            <g transform="rotate(-38 120 30)">
+              <rect class="s-pillA" x="104" y="22" width="32" height="16" rx="8"/>
+              <rect class="s-pillB" x="120" y="22" width="16" height="16" rx="8"/>
+              <line class="s-pillD" x1="120" y1="22" x2="120" y2="38"/>
+            </g>
+            <path class="s-spark" d="M27 30 l2.4 5.2 l5.2 2.4 l-5.2 2.4 l-2.4 5.2 l-2.4 -5.2 l-5.2 -2.4 l5.2 -2.4 z"/>
+            <path class="s-spark" d="M30 76 l1.6 3.4 l3.4 1.6 l-3.4 1.6 l-1.6 3.4 l-1.6 -3.4 l-3.4 -1.6 l3.4 -1.6 z"/>
+          </svg>
+          <p class="avis-k">Votre avis compte</p>
+          <h2>Aidez-nous à améliorer cet atelier</h2>
+          <div class="avis-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path class="s-star" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path class="s-star" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path class="s-star" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path class="s-star" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path class="s-star" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="avis-sub">3 questions, moins de 2 minutes — vos réponses guideront les prochaines versions.</p>
+          <a class="btn avis-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSeg3tbxIbBF1pNbhLcnd9p1VgJclqz4Z-PHE0qbaUhepSvJaw/viewform" target="_blank" rel="noopener">Donner mon avis →</a>
+        </div>
+
         <div class="card">
           <p class="kicker">Synthèse — l'entonnoir du développement</p>
           <h2 class="title">Ce que vous venez de piloter</h2>
@@ -813,7 +967,19 @@ var RCT = [
            {t:'Oui : pour accélérer les inclusions', ok:false} ],
     rat:'Le « play the winner » déplace progressivement l\'allocation vers le bras qui semble gagner au fil des données. Séduisant sur le plan éthique, il <b>fragilise la comparabilité et l\'inférence</b> d\'un essai d\'enregistrement. Pour un pivot confirmatoire, on privilégie une <b>allocation fixe équilibrée (1:1)</b>, plus robuste.' }
 ];
+// Mélange (Fisher–Yates) l'ordre des options de chaque question, EN PLACE.
+// Affichage (data-j) et score (.ok) lisent le même s.opts → la bonne réponse
+// tombe à une position aléatoire sans jamais fausser le surlignage ni le score.
+function shuffleOpts(arr){
+  arr.forEach(function(s){
+    for(var i=s.opts.length-1;i>0;i--){
+      var j=Math.floor(Math.random()*(i+1));
+      var t=s.opts[i]; s.opts[i]=s.opts[j]; s.opts[j]=t;
+    }
+  });
+}
 function renderPico(){
+  shuffleOpts(PICO); shuffleOpts(HYPO); shuffleOpts(RCT);   // nouvel ordre au chargement ET à chaque réinitialisation
   document.getElementById('picoList').innerHTML = PICO.map(function(s,i){ return scnHTML('pico',i,s); }).join('');
   document.getElementById('hypoList').innerHTML = HYPO.map(function(s,i){ return scnHTML('hypo',i,s); }).join('');
   document.getElementById('rctList').innerHTML = RCT.map(function(s,i){ return scnHTML('rct',i,s); }).join('');
@@ -1292,6 +1458,110 @@ function renderFunnel(){
   }).join('');
 }
 
+/* ===================== AIDES À LA NAVIGATION ===================== */
+/* Titre d'une partie, lu directement dans la barre latérale (source unique — pas de 2e liste). */
+function panelTitle(id){
+  var t=document.querySelector('.navbtn[data-go="'+id+'"] .t');
+  if(!t) return id;
+  var first=t.childNodes[0];            // texte avant le <small> sous-titre
+  return first ? first.textContent.trim() : id;
+}
+/* Injecte en bas de CHAQUE partie une barre « ← Précédent / Suivant → », d'après l'ordre `panels`. */
+function injectPanelNav(){
+  panels.forEach(function(id, i){
+    var sec=document.getElementById(id);
+    if(!sec) return;
+    var prev=panels[i-1], next=panels[i+1];
+    var bar=document.createElement('div'); bar.className='panelnav';
+    var left=document.createElement('div'); left.className='pn-left';
+    var right=document.createElement('div'); right.className='pn-right';
+    if(prev){
+      var pb=document.createElement('button');
+      pb.className='btn ghost'; pb.type='button'; pb.textContent='← Précédent';
+      pb.addEventListener('click', function(){ go(prev); });
+      left.appendChild(pb);
+    }
+    if(next){
+      var nb=document.createElement('button');
+      nb.className='btn brand pn-next'; nb.type='button';
+      nb.textContent=(id==='accueil'?'Commencer → ':'Suivant → ')+panelTitle(next);
+      nb.addEventListener('click', function(){ go(next); });
+      right.appendChild(nb);
+    } else {                             // dernière partie (synth)
+      var rb=document.createElement('button');
+      rb.className='btn brand'; rb.type='button'; rb.textContent='↻ Recommencer l\'atelier';
+      rb.addEventListener('click', function(){ go('accueil'); });
+      right.appendChild(rb);
+    }
+    bar.appendChild(left); bar.appendChild(right);
+    sec.appendChild(bar);
+  });
+}
+/* Met en évidence le « Suivant » quand la partie courante est validée (navigation toujours libre). */
+function refreshPanelNav(){
+  panels.forEach(function(id){
+    var sec=document.getElementById(id); if(!sec) return;
+    var nx=sec.querySelector('.pn-next');
+    if(nx) nx.classList.toggle('nav-ready', !!state.done[id]);
+  });
+}
+/* go() et markDone() rafraîchissent le halo, sans rien bloquer. */
+var _go=go; go=function(id){ _go(id); refreshPanelNav(); };
+var _markDone=markDone; markDone=function(id){ _markDone(id); refreshPanelNav(); };
+
+/* ===================== GUIDE « COMMENT JOUER » (propre à chaque partie) ===================== */
+/* Table {id de partie → étapes d'action}. Intitulés repris tels quels du fichier. */
+var HOWTO = {
+  preclin:[
+    'Sur chaque étude, cliquez <span class="hbtn ghost">Réaliser l\'étude</span> — les 6 complètent le dossier.',
+    'Puis cliquez <span class="hbtn brand">Déposer le dossier → demander l\'autorisation</span>.'
+  ],
+  pico:[
+    'À chaque question, cliquez la réponse que vous jugez juste.',
+    'La phrase <b>P·I·C·O</b> se complète au fur et à mesure.',
+    'Pour corriger, cliquez <span class="hbtn ghost">↺ Réinitialiser cette étape</span>.'
+  ],
+  p1:[
+    'Cliquez <span class="hbtn brand">▶ Administrer la cohorte suivante</span> pour monter les doses.',
+    'Surveillez la <b>kaliémie (K⁺)</b>, qui grimpe à chaque palier.',
+    'Au bon moment, cliquez <span class="hbtn info">⊠ Arrêter et déclarer la DMT</span>.',
+    'Choisissez le palier, puis <span class="hbtn brand">✓ Confirmer la DMT choisie</span>.'
+  ],
+  p2:[
+    'Cliquez <span class="hbtn brand">▶ Lancer l\'essai de phase II</span>.',
+    'Puis cliquez la <b>barre</b> de la dose à retenir pour la phase III.'
+  ],
+  p3:[
+    'Réglez les <b>curseurs</b> (effet, variabilité, puissance, risque, perdus de vue).',
+    'Cliquez <span class="hbtn brand">✓ Valider ce protocole</span>.',
+    'Puis cliquez <span class="hbtn brand">▶ Lancer l\'essai pivot</span>.'
+  ],
+  ci:[
+    'Cliquez un <b>scénario</b> (A, B, C, D).',
+    'Lisez l\'IC sur l\'axe et jugez&nbsp;: <b>significatif&nbsp;?</b> puis <b>pertinent&nbsp;?</b>'
+  ],
+  pv:[
+    'Cliquez <span class="hbtn brand">▶ Étendre l\'exposition</span>, étape par étape.',
+    'Regardez les cas d\'<b>angio-œdème</b> émerger jusqu\'au <b>signal</b>.'
+  ]
+};
+/* Injecte la bande « Comment jouer » après le chapô (.lead) de la 1re carte de chaque partie. */
+function injectHowTo(){
+  Object.keys(HOWTO).forEach(function(id){
+    var sec=document.getElementById(id); if(!sec) return;
+    var card=sec.querySelector('.card'); if(!card) return;
+    var steps=HOWTO[id].map(function(s,k){
+      return '<div class="hstep"><span class="hn">'+(k+1)+'</span><span class="ht">'+s+'</span></div>';
+    }).join('');
+    var box=document.createElement('div');
+    box.className='howto';
+    box.innerHTML='<div class="hh">Comment jouer</div><div class="hsteps">'+steps+'</div>';
+    var lead=card.querySelector('.lead');
+    if(lead){ lead.insertAdjacentElement('afterend', box); }
+    else { card.insertBefore(box, card.firstChild); }
+  });
+}
+
 /* ===================== INIT ===================== */
 renderStudies();
 renderPico();
@@ -1301,6 +1571,9 @@ ssRender();
 renderCiScn(); ciShow('A');
 pvReset();
 renderFunnel();
+injectHowTo();
+injectPanelNav();
+refreshPanelNav();
 </script>
 </body>
 </html>
